@@ -13,7 +13,7 @@ const Home = (props: Props) => {
         <section
             id="home-page"
         >
-            <div className="flex flex-col justify-center items-center h-screen">
+            <div className="flex flex-col justify-center items-center pt-52 text-center">
                 <h1 className='text-4xl font-bold text-gray-800'>What will you design today?</h1>
                 <p className='text-gray-600 text-lg mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                 { /* margin top 4 */}

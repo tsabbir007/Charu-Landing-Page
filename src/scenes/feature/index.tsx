@@ -1,4 +1,5 @@
 import { FeatureType, SelectedPage } from '@/shared/types'
+import HText from "@/shared/HText";
 import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
@@ -48,6 +49,116 @@ const Feature = (props: Props) => {
                         <ActionButton setSelectedPage={props.setSelectedPage}> Get Started</ActionButton>
                     </div>
                 </motion.div>
+
+                <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex text-center">
+                    {/* Video */}
+                    <video src="https://static.canva.com/anon_home/benefits-start-en-1200x780-compressed.mp4" autoPlay loop muted className="md:w-1/2 mt-8"></video>
+
+                    {/* DESCRIPTION */}
+                    <div>
+                        {/* TITLE */}
+                        <div className="relative">
+                            <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ duration: 0.5 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: 50 },
+                                        visible: { opacity: 1, x: 0 },
+                                    }}
+                                >
+                                    <HText>
+                                        MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                                        <span className="text-primary-500">FIT</span>
+                                    </HText>
+                                </motion.div>
+                            </div>
+                        </div>
+
+                        {/* DESCRIPT */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                            variants={{
+                                hidden: { opacity: 0, x: 50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
+                            <p className="my-5">
+                                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
+                                egestas ultrices consectetur adipiscing ultricies enim. pascetur aenean massa auctor tincidunt. Iaculis potenti amet
+                                egestas ultrices consectetur adipiscing ultricies enim.
+                            </p>
+                        </motion.div>
+
+                        {/* BUTTON */}
+                        <div className="relative mt-16">
+                            <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                                <ActionButton setSelectedPage={props.setSelectedPage}>
+                                    Join Now
+                                </ActionButton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex text-center">
+                    {/* DESCRIPTION */}
+                    <div>
+                        {/* TITLE */}
+                        <div className="relative">
+                            <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+                                <motion.div
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.5 }}
+                                    transition={{ duration: 0.5 }}
+                                    variants={{
+                                        hidden: { opacity: 0, x: 50 },
+                                        visible: { opacity: 1, x: 0 },
+                                    }}
+                                >
+                                    <HText>
+                                        MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                                        <span className="text-primary-500">FIT</span>
+                                    </HText>
+                                </motion.div>
+                            </div>
+                        </div>
+
+                        {/* DESCRIPT */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                            variants={{
+                                hidden: { opacity: 0, x: 50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
+                            <p className="my-5">
+                                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
+                                egestas ultrices consectetur adipiscing ultricies enim. pascetur aenean massa auctor tincidunt. Iaculis potenti amet
+                                egestas ultrices consectetur adipiscing ultricies enim.
+                            </p>
+                        </motion.div>
+
+                        {/* BUTTON */}
+                        <div className="relative mt-16">
+                            <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+                                <ActionButton setSelectedPage={props.setSelectedPage}>
+                                    Join Now
+                                </ActionButton>
+                            </div>
+                        </div>
+                    </div>
+                    {/* Video */}
+                    <video src="https://static.canva.com/anon_home/benefits-start-en-1200x780-compressed.mp4" autoPlay loop muted className="md:w-1/2 mt-8"></video>
+                </div>
             </div>
         </section>
     )
