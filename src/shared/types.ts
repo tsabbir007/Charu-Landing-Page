@@ -4,3 +4,8 @@ export enum SelectedPage{
     Contact = "contact",
     SignUp = "signup",
 }
+
+export interface FeatureType {
+    title: string;
+    description: string;
+}
