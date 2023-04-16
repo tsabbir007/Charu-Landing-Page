@@ -10,7 +10,7 @@ const Home = (props: Props) => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     return (
         <section
-            id="home-page"
+            id="home"
         >
             <div className="flex flex-col justify-center items-center pt-52 text-center">
                 <h1 className='text-5xl font-bold text-gray-800 font-sand mb-5'>What will you design today?</h1>

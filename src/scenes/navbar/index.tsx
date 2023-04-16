@@ -38,17 +38,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           {isAboveMediumScreens ? (
             <div className={`${flexBetween} gap-20`}>
               <Link
-                page="Home Page"
+                page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Service Page"
+                page="Service"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <Link
-                page="Product Page"
+                page="Products"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -61,7 +61,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           <div className={`${flexBetween} gap-4`}>
             <input
               type="text"
-              className="h-10 w-64 rounded-lg border-2 border-gray-300 px-4 focus:border-gray-500 focus:outline-none"
+              className="h-10 w-full sm:w-64 rounded-lg border-2 border-gray-300 px-4 focus:border-gray-500 focus:outline-none sm:block hidden"
               placeholder="Search"
             />
           </div>
@@ -87,14 +87,24 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="px-[10%] flex flex-col gap-10 text-2xl">
+          <input
+              type="text"
+              className="h-10 w-full sm:w-64 rounded-lg border-2 border-gray-300 px-4 focus:border-gray-500 focus:outline-none"
+              placeholder="Search"
+            />
             <Link
-              page="Home Page"
+              page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <Link
-              page="Service Page"
+              page="Service"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+             <Link
+              page="Products"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

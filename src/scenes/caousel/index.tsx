@@ -1,7 +1,7 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import ActionButton from "@/shared/ActionButton";
-import { FeatureType, SelectedPage } from "@/shared/types";
+import { CarouselType, SelectedPage } from "@/shared/types";
 import useMediaQuery from '@/hooks/useMediaQuery'
 
 
@@ -10,62 +10,63 @@ type Props = {
 }
 
 const Carousel = (props: Props) => {
-  const features: Array<FeatureType> = [
+  const isAboveSmallScreens = useMediaQuery('(min-width: 640px)')
+  const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
+
+  var x = 2;
+  if (isAboveSmallScreens) x = 3;
+  if (isAboveMediumScreens) x = 5;
+
+  const carousels: Array<CarouselType> = [
     {
-      IsPaid: false,
-      Title: "Canva Free",
-      Description: "For anyone wanting to design anything, on your own or with others. No design experience required, and it's free forever.",
-      ButtonText: "Get Canva Free",
+      Title: "Canva Create 2023",
+      Url: "https://www.canva.com/create/",
+      Description: "Watch all the highlights and launches from our biggest virtual event.",
+      MediaUrl: "https://content-management-files.canva.com/1a81fef4-7a69-4cf6-9722-bbcdb60ecf5c/English.png",
     },
     {
-      IsPaid: true,
-      Title: "Canva Pro",
-      Description: "For individuals wanting unlimited access to premium content, with special tools to grow your brand or passion project.",
-      ButtonText: "Start your free Pro trial"
+      Title: "We've got a desktop app",
+      Url: "https://www.canva.com/create/",
+      Description: "Design and collaborate from the comfort of your desktop - no browser, no tabs, no distractions. Download the app for free!",
+      MediaUrl: "https://content-management-files.canva.com/e85c7778-c24c-4ad8-9f6a-bdc406e799f0/desktopApp-en-500x375.jpg",
     },
     {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
+      Title: "Businesses love us",
+      Url: "https://www.canva.com/create/",
+      Description: "See how teams of all sizes are using Canva to manage their workflows and create together.",
+      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
     },
     {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
+      Title: "We make presenting easy",
+      Url: "https://www.canva.com/create/",
+      Description: "Take the stress out of preparing and presenting with our go-to decks.",
+      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
     },
     {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
+      Title: "We have a video editor",
+      Url: "https://www.canva.com/create/",
+      Description: "Create and edit professional videos with easy animations, audio and more.",
+      MediaUrl: "https://content-management-files.canva.com/bb95860a-174b-4a6f-ab7b-dc64fbb7cf52/video-en-500x375.jpg",
     },
     {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
+      Title: "Businesses love us",
+      Url: "https://www.canva.com/create/",
+      Description: "See how teams of all sizes are using Canva to manage their workflows and create together.",
+      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
     },
     {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
+      Title: "We make presenting easy",
+      Url: "https://www.canva.com/create/",
+      Description: "Take the stress out of preparing and presenting with our go-to decks.",
+      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
     },
-    {
-      IsPaid: true,
-      Title: "Canva for Team",
-      Description: "For teams of all sizes wanting to create together, with premium workplace tools and approval flows.",
-      ButtonText: "Start your free Team trial"
-    }
   ]
 
-  const featureItems = features.map(feature =>
+  const CarouselItems = carousels.map(carousel =>
     <div className="flex flex-col gap-4 keen-slider__slide">
-      <a href="#"><img src="https://content-management-files.canva.com/bb95860a-174b-4a6f-ab7b-dc64fbb7cf52/video-en-500x375.jpg" alt="slider" className="rounded-lg w-full h-auto" /></a>
-      <h6 className="font-bold text-xs">{feature.Title}</h6>
-      <p className="text-xs text-slate-500">{feature.Description}</p>
+      <a href="#"><img src={carousel.MediaUrl} alt="slider" className="rounded-lg w-full h-auto" /></a>
+      <h6 className="font-bold text-xs">{carousel.Title}</h6>
+      <p className="text-xs text-slate-500">{carousel.Description}</p>
     </div>
 
   );
@@ -73,12 +74,20 @@ const Carousel = (props: Props) => {
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "free",
-    slides: { perView: 3, spacing: 15 },
+    slides: { origin: "center", perView: x, spacing: 20 },
   })
   return (
-    <div ref={ref} className="keen-slider py-52">
-      {featureItems}
-    </div>
+    <section
+      id="products"
+    >
+      <div className="flex flex-col justify-center items-center pt-40 text-center">
+        <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We're full of surprises</h1>
+        <p className='text-gray-600 text-lg mt-1'>Here are some of our best traits you might not know about</p>
+        <div ref={ref} className="keen-slider mt-10 pb-52">
+          {CarouselItems}
+        </div>
+      </div>
+    </section>
   )
 }
 

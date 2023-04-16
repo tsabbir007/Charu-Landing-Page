@@ -1,8 +1,7 @@
-export enum SelectedPage{
+export enum SelectedPage {
     Home = "home",
-    About = "about",
-    Contact = "contact",
-    SignUp = "signup",
+    Services = "service",
+    Products = "products",
 }
 
 export interface FeatureType {
@@ -18,4 +17,11 @@ export interface ServiceType {
     Title: string;
     Description: string;
     ButtonText: string;
+}
+
+export interface CarouselType {
+    Title: string;
+    Url: string;
+    Description: string;
+    MediaUrl: string;
 }

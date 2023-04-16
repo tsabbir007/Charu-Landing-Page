@@ -66,7 +66,7 @@ const Services = (props: Props) => {
     );
 
     return (
-        <section id="services">
+        <section id="service">
             <div className="flex flex-col gap-4 mt-8 md:px-8 items-center">
                 {serviceItems}
             </div>
