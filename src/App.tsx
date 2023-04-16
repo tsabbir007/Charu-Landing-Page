@@ -1,6 +1,7 @@
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
 import Feature from "@/scenes/feature";
+import Services from "@/scenes/services";
 import { useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { useEffect } from "react";
@@ -30,9 +31,10 @@ function App() {
       />
       {/* container */}
 
-      <div className="container mx-auto">
+      <div className="container mx-auto md:px-36">
         <Home setSelectedPage={setSelectedPage}/>
         <Feature setSelectedPage={setSelectedPage}/>
+        <Services setSelectedPage={setSelectedPage}/>
       </div>
 
     </div>

@@ -1,16 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        "primary-100" : "#8b3dff",
+        "primary-100": "#8b3dff",
       },
       fontFamily: {
         sans: ["Noto Sans", "sans-serif"],
+        sand: ["Quicksand", "sans-serif"],
       },
       screens: {
         xs: "480px",
@@ -20,4 +18,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

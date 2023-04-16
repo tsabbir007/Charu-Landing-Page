@@ -1,4 +1,3 @@
-import React from 'react'
 import { SelectedPage } from '@/shared/types'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/shared/ActionButton'
@@ -14,7 +13,7 @@ const Home = (props: Props) => {
             id="home-page"
         >
             <div className="flex flex-col justify-center items-center pt-52 text-center">
-                <h1 className='text-4xl font-bold text-gray-800'>What will you design today?</h1>
+                <h1 className='text-5xl font-bold text-gray-800 font-sand mb-5'>What will you design today?</h1>
                 <p className='text-gray-600 text-lg mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
                 { /* margin top 4 */}
                 <div className="flex flex-col gap-4 mt-4">

@@ -6,6 +6,16 @@ export enum SelectedPage{
 }
 
 export interface FeatureType {
-    title: string;
-    description: string;
+    IsPaid: boolean;
+    Title: string;
+    Description: string;
+    ButtonText: string;
+}
+
+export interface ServiceType {
+    IsVideoUrl: boolean;
+    MediaUrl: string;
+    Title: string;
+    Description: string;
+    ButtonText: string;
 }
