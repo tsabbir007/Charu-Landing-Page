@@ -5,6 +5,7 @@ import Services from "@/scenes/services";
 import { useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { useEffect } from "react";
+import Carousel from "@/scenes/caousel";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
@@ -32,11 +33,13 @@ function App() {
       {/* container */}
 
       <div className="container mx-auto md:px-36">
-        <Home setSelectedPage={setSelectedPage}/>
-        <Feature setSelectedPage={setSelectedPage}/>
-        <Services setSelectedPage={setSelectedPage}/>
+        <Home setSelectedPage={setSelectedPage} />
+        <Feature setSelectedPage={setSelectedPage} />
+        <Services setSelectedPage={setSelectedPage} />
       </div>
-
+      <div className="px-6">
+        <Carousel setSelectedPage={setSelectedPage} />
+      </div>
     </div>
   );
 }
