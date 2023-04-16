@@ -64,7 +64,7 @@ const Carousel = (props: Props) => {
 
   const CarouselItems = carousels.map(carousel =>
     <div className="flex flex-col gap-4 keen-slider__slide">
-      <a href="#"><img src={carousel.MediaUrl} alt="slider" className="rounded-lg w-full h-auto" /></a>
+      <a href={carousel.Url}><img src={carousel.MediaUrl} alt="slider" className="rounded-lg w-full h-auto" /></a>
       <h6 className="font-bold text-xs">{carousel.Title}</h6>
       <p className="text-xs text-slate-500">{carousel.Description}</p>
     </div>
@@ -82,7 +82,7 @@ const Carousel = (props: Props) => {
     >
       <div className="flex flex-col justify-center items-center pt-40 text-center">
         <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We're full of surprises</h1>
-        <p className='text-gray-600 text-lg mt-1'>Here are some of our best traits you might not know about</p>
+        <p className='text-gray-600 text-lg mt-1 mb-5'>Here are some of our best traits you might not know about</p>
         <div ref={ref} className="keen-slider mt-10 pb-52">
           {CarouselItems}
         </div>

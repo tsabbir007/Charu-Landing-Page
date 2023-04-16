@@ -6,6 +6,7 @@ import { useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { useEffect } from "react";
 import Carousel from "@/scenes/caousel";
+import Masonry from "@/scenes/masonry";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
@@ -36,6 +37,7 @@ function App() {
         <Home setSelectedPage={setSelectedPage} />
         <Feature setSelectedPage={setSelectedPage} />
         <Services setSelectedPage={setSelectedPage} />
+        <Masonry setSelectedPage={setSelectedPage} />
       </div>
       <div className="px-6">
         <Carousel setSelectedPage={setSelectedPage} />
