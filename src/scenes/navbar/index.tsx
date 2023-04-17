@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "@/assets/logo.svg";
+import Logo from "@/assets/charu-logo.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
@@ -33,10 +33,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <div></div>
           )}
 
-          <img alt="logo" src={Logo} className="w-24" />
+          {/* <img alt="logo" src={Logo} className="w-10" /> */}
+          <h1 className="text-3xl font-sand font-bold">Charu</h1>
 
           {isAboveMediumScreens ? (
-            <div className={`${flexBetween} gap-20`}>
+            <div className={`${flexBetween} gap-20 items-center`}>
               <Link
                 page="Home"
                 selectedPage={selectedPage}
@@ -49,6 +50,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               />
               <Link
                 page="Products"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />

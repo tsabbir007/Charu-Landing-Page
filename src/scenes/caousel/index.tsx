@@ -19,44 +19,44 @@ const Carousel = (props: Props) => {
 
   const carousels: Array<CarouselType> = [
     {
-      Title: "Canva Create 2023",
-      Url: "https://www.canva.com/create/",
+      Title: "Charu Create 2023",
+      Url: "https://www.charu.com/create/",
       Description: "Watch all the highlights and launches from our biggest virtual event.",
       MediaUrl: "https://content-management-files.canva.com/1a81fef4-7a69-4cf6-9722-bbcdb60ecf5c/English.png",
     },
     {
       Title: "We've got a desktop app",
-      Url: "https://www.canva.com/create/",
+      Url: "https://www.charu.com/create/",
       Description: "Design and collaborate from the comfort of your desktop - no browser, no tabs, no distractions. Download the app for free!",
       MediaUrl: "https://content-management-files.canva.com/e85c7778-c24c-4ad8-9f6a-bdc406e799f0/desktopApp-en-500x375.jpg",
     },
     {
       Title: "Businesses love us",
-      Url: "https://www.canva.com/create/",
-      Description: "See how teams of all sizes are using Canva to manage their workflows and create together.",
+      Url: "https://www.charu.com/create/",
+      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
       MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
     },
     {
       Title: "We make presenting easy",
-      Url: "https://www.canva.com/create/",
+      Url: "https://www.charu.com/create/",
       Description: "Take the stress out of preparing and presenting with our go-to decks.",
       MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
     },
     {
       Title: "We have a video editor",
-      Url: "https://www.canva.com/create/",
+      Url: "https://www.charu.com/create/",
       Description: "Create and edit professional videos with easy animations, audio and more.",
       MediaUrl: "https://content-management-files.canva.com/bb95860a-174b-4a6f-ab7b-dc64fbb7cf52/video-en-500x375.jpg",
     },
     {
       Title: "Businesses love us",
-      Url: "https://www.canva.com/create/",
-      Description: "See how teams of all sizes are using Canva to manage their workflows and create together.",
+      Url: "https://www.charu.com/create/",
+      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
       MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
     },
     {
       Title: "We make presenting easy",
-      Url: "https://www.canva.com/create/",
+      Url: "https://www.charu.com/create/",
       Description: "Take the stress out of preparing and presenting with our go-to decks.",
       MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
     },
@@ -78,9 +78,9 @@ const Carousel = (props: Props) => {
   })
   return (
     <section
-      id="products"
+      id="about"
     >
-      <div className="flex flex-col justify-center items-center pt-40 text-center">
+      <div className="flex flex-col justify-center items-center text-center pt-48">
         <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We're full of surprises</h1>
         <p className='text-gray-600 text-lg mt-1 mb-5'>Here are some of our best traits you might not know about</p>
         <div ref={ref} className="keen-slider mt-10 pb-52">

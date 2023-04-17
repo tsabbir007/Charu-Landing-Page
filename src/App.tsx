@@ -1,12 +1,13 @@
 import Navbar from "@/scenes/navbar";
 import Home from "@/scenes/home";
-import Feature from "@/scenes/feature";
-import Services from "@/scenes/services";
+import Feature from "@/scenes/services";
+import Services from "@/scenes/features";
 import { useState } from "react";
 import { SelectedPage } from "@/shared/types";
 import { useEffect } from "react";
 import Carousel from "@/scenes/caousel";
 import Masonry from "@/scenes/masonry";
+import Footer from "@/scenes/footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
@@ -37,10 +38,11 @@ function App() {
         <Home setSelectedPage={setSelectedPage} />
         <Feature setSelectedPage={setSelectedPage} />
         <Services setSelectedPage={setSelectedPage} />
-        <Masonry setSelectedPage={setSelectedPage} />
+        <Masonry/>
       </div>
       <div className="px-6">
         <Carousel setSelectedPage={setSelectedPage} />
+        <Footer/>
       </div>
     </div>
   );
