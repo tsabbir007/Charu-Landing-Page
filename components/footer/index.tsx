@@ -74,12 +74,19 @@ const Footer = (props: Props) => {
         <section id='footer'>
             <div className='border-b border-gray-500'></div>
             <div className='grid-1 grid gap-8 sm:grid-cols-2 md:grid-cols-5 px-10 pt-16'>
-                {footerElements.map((footerElement) => (
-                    <div className='footer-items'>
+                {footerElements.map((footerElement, index) => (
+                    <div
+                        key={index}
+                        className='footer-items'
+                    >
                         <h1 className='text-md font-bold text-gray-800 mb-2'>{footerElement.Title}</h1>
                         <ul className=''>
-                            {footerElement.Items.map((item) => (
-                                <li className='text-gray-600 text-sm mt-1 leading-6'><a href={`${SelectedPage.Charu}`}>{item}</a></li>
+                            {footerElement.Items.map((item, index) => (
+                                <li
+                                    key={index}
+                                    className='text-gray-600 text-sm mt-1 leading-6'>
+                                    <a href={`${SelectedPage.Charu}`}>{item}</a>
+                                </li>
                             ))}
                         </ul>
                     </div>

@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 import { MasonryType, SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery'
+import Image from 'next/image';
 
 const Label = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -104,16 +105,17 @@ export default function SSRMasonry() {
     return (
         <section id="products">
             <div className="flex flex-col justify-center pt-48 text-center">
-                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We're full of surprises</h1>
+                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We are full of surprises</h1>
                 <p className='text-gray-600 text-lg mt-1 mb-20'>Here are some of our best traits you might not know about</p>
                 <Box sx={{}}>
                     <Masonry columns={x} spacing={2}>
                         {masonry.map((item, index) => (
                             <div key={index}>
                                 <a href={item.Url}>
-                                    <img
+                                    <Image
                                         src={`${item.MediaUrl}?w=162&auto=format`}
-                                        srcSet={`${item.MediaUrl}?w=162&auto=format&dpr=2 2x`}
+                                        height={500}
+                                        width={500}
                                         alt={item.Title}
                                         loading="lazy"
                                         style={{

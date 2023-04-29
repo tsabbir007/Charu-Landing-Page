@@ -2,6 +2,7 @@ import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import { CarouselType, SelectedPage } from "@/shared/types";
 import useMediaQuery from '@/hooks/useMediaQuery'
+import Image from "next/image";
 
 
 type Props = {
@@ -61,14 +62,22 @@ const Carousel = (props: Props) => {
     },
   ]
 
-  const CarouselItems = carousels.map(carousel =>
-    <div className="flex flex-col gap-4 keen-slider__slide">
-      <a href={carousel.Url}><img src={carousel.MediaUrl} alt="slider" className="rounded-lg w-full h-auto" /></a>
+  const CarouselItems = carousels.map((carousel, index) => (
+    <div key={index} className="flex flex-col gap-4 keen-slider__slide">
+      <a href={carousel.Url}>
+        <Image 
+        width={500}
+        height={375}
+        src={carousel.MediaUrl} 
+        alt="slider" 
+        className="rounded-lg w-full h-auto" 
+        />
+        </a>
       <h6 className="font-bold text-xs">{carousel.Title}</h6>
       <p className="text-xs text-slate-500">{carousel.Description}</p>
     </div>
-
-  );
+  ));
+  
 
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -80,7 +89,7 @@ const Carousel = (props: Props) => {
       id="about"
     >
       <div className="flex flex-col justify-center items-center text-center pt-48">
-        <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We're full of surprises</h1>
+        <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Were full of surprises</h1>
         <p className='text-gray-600 text-lg mt-1 mb-5'>Here are some of our best traits you might not know about</p>
         <div ref={ref} className="keen-slider mt-10 pb-52">
           {CarouselItems}

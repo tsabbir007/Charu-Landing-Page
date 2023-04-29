@@ -3,6 +3,7 @@ import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
+import Image from "next/image";
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -36,9 +37,18 @@ const features: Array<FeatureType> = [
 const Features = (props: Props) => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     const featureItems = features.map((feature, index) =>
-        <div className={"mt-16 items-center justify-between gap-20 md:mt-28 md:flex " + (index % 2 && "md:flex-row-reverse")}>
+        <div
+            key={index}
+            className={"mt-16 items-center justify-between gap-20 md:mt-28 md:flex " + (index % 2 && "md:flex-row-reverse")}
+        >
             {feature.IsVideoUrl ? (<video src={feature.MediaUrl} autoPlay loop muted className="md:w-1/2 mt-8"></video>) : (
-                <img src={feature.MediaUrl} alt="feature image" className="md:w-1/2 mt-8" />
+                <Image
+                width={500}
+                height={500}
+                src={feature.MediaUrl}
+                alt="feature image"
+                className="md:w-1/2 mt-8"
+                />
             )}
             <div className="ps-10">
                 <HText>{feature.Title}</HText>
