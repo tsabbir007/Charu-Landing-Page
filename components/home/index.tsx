@@ -20,7 +20,7 @@ const Home = (props: Props) => {
                     <ActionButton setSelectedPage={props.setSelectedPage}> Get Started</ActionButton>
                 </div>
 
-                <video src="https://content-management-files.canva.com/943bd1b3-ffd6-4892-a4df-b107cb33e657/hero-banner-en-1600x852.mp4" autoPlay loop className='w-3/4 mt-8'></video>
+                <video src="https://content-management-files.canva.com/943bd1b3-ffd6-4892-a4df-b107cb33e657/hero-banner-en-1600x852.mp4" autoPlay loop className='mt-8'></video>
             </div>
         </section>
     )
