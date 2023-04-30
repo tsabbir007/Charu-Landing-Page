@@ -20,7 +20,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
   return (
     <nav>
-      <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div className={`${navbarBackground} fixed top-0 z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-11/12`}>
           {!isAboveMediumScreens ? (
             <div className={`${flexBetween} gap-4`}>
@@ -30,16 +30,15 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               />
             </div>
           ) : (
-            <div></div>
+            <div>
+              {/* <img alt="logo" src={Logo} className="w-10" /> */}
+              <h1 className="text-3xl font-sand font-bold">
+                <a href="#">
+                  Charu
+                </a>
+              </h1>
+            </div>
           )}
-
-          {/* <img alt="logo" src={Logo} className="w-10" /> */}
-          <h1 className="text-3xl font-sand font-bold">
-            <a href="#">
-              Charu
-            </a>
-          </h1>
-
           {isAboveMediumScreens ? (
             <div className={`${flexBetween} gap-20 items-center`}>
               <Link
@@ -66,26 +65,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           ) : (
             <div></div>
           )}
-
-          {/* searchbar */}
-          <div className={`${flexBetween} gap-4`}>
-            <input
-              type="text"
-              className="h-10 w-full sm:w-64 rounded-lg border-2 border-gray-300 px-4 focus:border-gray-500 focus:outline-none sm:block hidden"
-              placeholder="Search"
-            />
-          </div>
-          {/* help icon */}
-          <div className={``}></div>
           {/* login/signup button */}
           <div className={`${flexBetween} gap-4`}>
-            <button className={`roundes-md bg-gray-100 text-black py-2 px-4 rounded focus:outline-none focus:shadow-outline`}>
-              <a href={`${SelectedPage.Charu}`}>
-                Log in
-              </a>
-            </button>
             <ActionButton setSelectedPage={setSelectedPage}>
-              Sign up
+              Download Free
             </ActionButton>
           </div>
         </div>
@@ -102,11 +85,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           {/* MENU ITEMS */}
           <div className="px-[10%] flex flex-col gap-10 text-2xl">
-            <input
-              type="text"
-              className="h-10 w-full sm:w-64 rounded-lg border-2 border-gray-300 px-4 focus:border-gray-500 focus:outline-none"
-              placeholder="Search"
-            />
             <Link
               page="Home"
               selectedPage={selectedPage}
