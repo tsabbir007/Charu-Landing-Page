@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "@/assets/charu-logo.png";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import Link from "./AnchorLink";
+import AnchorLink from "./AnchorLink";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
@@ -41,22 +41,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           )}
           {isAboveMediumScreens ? (
             <div className={`${flexBetween} gap-20 items-center`}>
-              <Link
+              <AnchorLink
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <AnchorLink
                 page="Service"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <AnchorLink
                 page="Products"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <AnchorLink
                 page="About"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
@@ -85,17 +85,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
           {/* MENU ITEMS */}
           <div className="px-[10%] flex flex-col gap-10 text-2xl">
-            <Link
+            <AnchorLink
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <AnchorLink
               page="Service"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
-            <Link
+            <AnchorLink
               page="Products"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
