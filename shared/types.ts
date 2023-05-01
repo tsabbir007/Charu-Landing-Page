@@ -36,5 +36,8 @@ export interface MasonryType {
 
 export interface FooterType {
     Title: string;
-    Items: string[];
+    Items: {
+        Name: string;
+        IsUpcomming: boolean;
+    }[];
 }
