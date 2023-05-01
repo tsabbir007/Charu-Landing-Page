@@ -40,11 +40,11 @@ const features: Array<FeatureType> = [
 const Features = (props: Props) => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     const featureItems = features.map((feature, index) =>
-        <div className={"flex flex-col justify-center text-center"}>
-            <div
-                key={index}
-                className={"mt-16 md:mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}
-            >
+        <div
+            key={index}
+            className={"flex flex-col justify-center text-center"}
+        >
+            <div className={"mt-16 md:mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}>
                 {feature.IsVideoUrl ? (<video src={feature.MediaUrl} autoPlay loop muted className="md:w-1/2 mt-8"></video>) : (
                     <Image
                         width={500}
