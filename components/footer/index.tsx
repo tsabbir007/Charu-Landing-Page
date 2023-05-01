@@ -243,7 +243,8 @@ const Footer = (props: Props) => {
             </div>
             <div className='mx-10'>
                 <div className='border-b border-gray-500 py-5'></div>
-                <div className='md:flex justify-between py-10'>
+                {/* <div className='md:flex justify-between py-10'> */}
+                <div className='flex items-center flex-col py-10 md:flex-row md:justify-between'>
                     <div className='language'>
                         <h1 className='text-md border py-1 px-2 text-gray-800 mb-2 flex items-center gap-1'>
                             <svg
@@ -266,7 +267,7 @@ const Footer = (props: Props) => {
                             Terms
                         </Link>
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mt-3 md:mt-0">
                         <a href="#"><svg
                             viewBox="0 0 24 24"
                             fill="#3b5998"

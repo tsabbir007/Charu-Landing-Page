@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
-  const flexBetween = "flex item-center justify-between";
+  const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const navbarBackground = isTopOfPage ? "drop-shadow-xl bg-white" : "bg-white";
@@ -23,14 +23,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     <nav>
       <div className={`${navbarBackground} fixed top-0 z-30 w-full py-6`}>
         <div className={`${flexBetween} mx-auto w-11/12`}>
-          {!isAboveMediumScreens ? (
-            <div className={`${flexBetween} gap-4`}>
-              <Bars3Icon
-                className="h-8 w-8"
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-              />
-            </div>
-          ) : (
+          <div className={`${flexBetween} gap-4`}>
+            {!isAboveMediumScreens && (
+              <div>
+                <div className={`gap-4`}>
+                  <Bars3Icon
+                    className="h-8 w-8"
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  />
+                </div>
+              </div>
+            )}
             <div>
               {/* <img alt="logo" src={Logo} className="w-10" /> */}
               <h1 className="text-3xl font-sand font-bold">
@@ -39,8 +42,8 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 </Link>
               </h1>
             </div>
-          )}
-          {isAboveMediumScreens ? (
+          </div>
+          {isAboveMediumScreens && (
             <div className={`${flexBetween} gap-20 items-center`}>
               <AnchorLink
                 page="Home"
@@ -63,8 +66,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 setSelectedPage={setSelectedPage}
               />
             </div>
-          ) : (
-            <div></div>
           )}
           {/* login/signup button */}
           <div className={`${flexBetween} gap-4`}>
