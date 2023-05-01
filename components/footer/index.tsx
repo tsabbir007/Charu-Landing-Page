@@ -1,4 +1,6 @@
 import { SelectedPage, FooterType } from '@/shared/types'
+import styles from './footer.module.scss'
+import Link from 'next/link'
 
 
 type Props = {
@@ -10,62 +12,177 @@ const Footer = (props: Props) => {
         {
             Title: 'Features',
             Items: [
-                "Curved text generator",
-                "Photo effects",
-                "Image enhancer",
-                "Add frames to photos",
-                "Add text to photos",
-                "Online video recorder",
-                "Video trimmer",
-                "Convert videos to MP4",
-                "See more features",
+                {
+                    Name: "Curved text generator",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Photo effects",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Image enhancer",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Add frames to photos",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Add text to photos",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Online video recorder",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Video trimmer",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "Convert videos to MP4",
+                    IsUpcomming: false,
+                },
+
+                {
+                    Name: "See more features",
+                    IsUpcomming: false,
+                }
             ]
         },
         {
             Title: 'Explore',
             Items: [
-                "Design ideas",
-                "Custom prints",
-                "Font pairing",
-                "Colors",
-                "Color wheel",
-                "Color pallete generator",
-                "Blog",
-                "Apps",
-                "Template directory",
+                {
+                    Name: "Design ideas",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Custom prints",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Font pairing",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Colors",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Color wheel",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Color pallete generator",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Blog",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Apps",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Template directory",
+                    IsUpcomming: false,
+                },
             ]
         },
         {
             Title: 'Community',
             Items: [
-                "Online communities",
-                "Creators",
-                "Charu Represents Fund",
-                "Developers",
-                "Partnerships",
-                "Affiliates program",
+                {
+                    Name: "Online communities",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Creators",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Charu Represents Fund",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Developers",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Partnerships",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Affiliates program",
+                    IsUpcomming: false,
+                },
             ]
         },
         {
             Title: 'Download',
             Items: [
-                "iOS",
-                "Android",
-                "Windows",
-                "Mac",
+                {
+                    Name: "iOS",
+                    IsUpcomming: true,
+                },
+                {
+                    Name: "Android",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Windows",
+                    IsUpcomming: true,
+                },
+                {
+                    Name: "Mac",
+                    IsUpcomming: true,
+                },
             ]
         },
         {
             Title: 'Company',
             Items: [
-                "About",
-                "Newsroom",
-                "Careers",
-                "Sustainability",
-                "Trust Center",
-                "Security",
-                "Terms and Privacy",
-                "Contact Sales",
+                {
+                    Name: "About",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Newsroom",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Careers",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Sustainability",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Trust Center",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Security",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Terms and Privacy",
+                    IsUpcomming: false,
+                },
+                {
+                    Name: "Contact Sales",
+                    IsUpcomming: false,
+                },
             ]
         },
     ]
@@ -85,7 +202,9 @@ const Footer = (props: Props) => {
                                 <li
                                     key={index}
                                     className='text-gray-600 text-sm mt-1 leading-6'>
-                                    <a href={`${SelectedPage.Charu}`}>{item}</a>
+                                    <a href={`${SelectedPage.Charu}`}>{item.Name}
+                                        {item.IsUpcomming && <span className={styles.Upcomming}>Comming soon!</span>}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
@@ -111,7 +230,11 @@ const Footer = (props: Props) => {
                     </div>
                     <div className='copyright text-center'>
                         <p className='text-gray-500 text-sm font-light mt-1'>© 2023 All Rights Reserved, Charu®</p>
-                        <a href="#" className='text-sm'>Privacy policy</a> | <a href="#" className='text-sm'>Terms</a>
+                        <Link href="/privacy/privacy_policy" className='text-sm'>
+                            Privacy policy
+                        </Link> |  <Link href="/privacy/term_conditions" className='text-sm'>
+                            Terms
+                        </Link>
                     </div>
                     <div className="flex gap-3">
                         <a href="#"><svg
