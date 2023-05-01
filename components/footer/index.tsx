@@ -13,47 +13,50 @@ const Footer = (props: Props) => {
             Title: 'Features',
             Items: [
                 {
-                    Name: "Curved text generator",
+                    Name: "Poster maker, flyer maker, card maker",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
-                    Name: "Photo effects",
+                    Name: "Variety of professionally designed templates",
                     IsUpcomming: false,
-                },
-
-                {
-                    Name: "Image enhancer",
-                    IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "Add frames to photos",
+                    Name: "Add text on photos with 50+ stylish fonts and graphical elements",
                     IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "Add text to photos",
+                    Name: "Create social media posts, stories, and cover designs",
                     IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "Online video recorder",
+                    Name: "Create your canvas design and layouts",
                     IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "Video trimmer",
+                    Name: "Make and edit designs with awesome photo editing tools",
                     IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "Convert videos to MP4",
+                    Name: "Logo design by the logo templates for branding your project",
                     IsUpcomming: false,
+                    Url: "",
                 },
 
                 {
-                    Name: "See more features",
+                    Name: "Save and share your designs with friends in seconds",
                     IsUpcomming: false,
+                    Url: "",
                 }
             ]
         },
@@ -63,38 +66,47 @@ const Footer = (props: Props) => {
                 {
                     Name: "Design ideas",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Custom prints",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Font pairing",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Colors",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Color wheel",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Color pallete generator",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Blog",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Apps",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Template directory",
                     IsUpcomming: false,
+                    Url: "",
                 },
             ]
         },
@@ -104,26 +116,32 @@ const Footer = (props: Props) => {
                 {
                     Name: "Online communities",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Creators",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Charu Represents Fund",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Developers",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Partnerships",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Affiliates program",
                     IsUpcomming: false,
+                    Url: "",
                 },
             ]
         },
@@ -133,18 +151,22 @@ const Footer = (props: Props) => {
                 {
                     Name: "iOS",
                     IsUpcomming: true,
+                    Url: "",
                 },
                 {
                     Name: "Android",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Windows",
                     IsUpcomming: true,
+                    Url: "",
                 },
                 {
                     Name: "Mac",
                     IsUpcomming: true,
+                    Url: "",
                 },
             ]
         },
@@ -154,34 +176,42 @@ const Footer = (props: Props) => {
                 {
                     Name: "About",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Newsroom",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Careers",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Sustainability",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Trust Center",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Security",
                     IsUpcomming: false,
+                    Url: "",
                 },
                 {
                     Name: "Terms and Privacy",
                     IsUpcomming: false,
+                    Url: "/privacy/term_conditions",
                 },
                 {
                     Name: "Contact Sales",
                     IsUpcomming: false,
+                    Url: "",
                 },
             ]
         },
@@ -202,7 +232,7 @@ const Footer = (props: Props) => {
                                 <li
                                     key={index}
                                     className='text-gray-600 text-sm mt-1 leading-6'>
-                                    <a href={`${SelectedPage.Charu}`}>{item.Name}
+                                    <a href={item.Url !== "" ? `${item.Url}` : `${SelectedPage.Charu}`}>{item.Name}
                                         {item.IsUpcomming && <span className={styles.Upcomming}>Comming soon!</span>}
                                     </a>
                                 </li>

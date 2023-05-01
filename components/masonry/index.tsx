@@ -5,6 +5,20 @@ import Masonry from '@mui/lab/Masonry';
 import { MasonryType, SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from 'next/image';
+import Img1 from './images/charu-1.jpg';
+import Img2 from './images/charu-2.jpg';
+import Img3 from './images/charu-3.jpg';
+import Img4 from './images/charu-4.jpg';
+import Img5 from './images/charu-5.png';
+import Img6 from './images/charu-6.png';
+import Img7 from './images/charu-7.png';
+import Img8 from './images/charu-8.png';
+import Img9 from './images/charu-9.png';
+import Img10 from './images/charu-10.png';
+import Img11 from './images/charu-11.png';
+import Img12 from './images/charu-12.png';
+import Img13 from './images/charu-13.png';
+import Img14 from './images/charu-14.png';
 
 const Label = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -33,87 +47,87 @@ export default function SSRMasonry() {
         {
             Title: "Charu Create 2023",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAD7RS_AUHA/5/0/400w-7xP3yZCn8fI.jpg",
+            MediaUrl: Img1,
         },
         {
             Title: "We've got a desktop app",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADZ4JnHDfI/3/0/286w-ZlWNaw0QaX8.jpg",
+            MediaUrl: Img2,
         },
         {
             Title: "Businesses love us",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADapG51fls/3/0/400w-aChlnr5L_Ww.jpg",
+            MediaUrl: Img3,
         },
         {
             Title: "We make presenting easy",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAEXA859wm0/2/0/400w-jRAxCD5Qpy4.jpg",
+            MediaUrl: Img4,
         },
         {
             Title: "We have a video editor",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADzZv2-vpk/1/0/400w-ogkaP-Wi21g.jpg",
+            MediaUrl: Img5,
         },
         {
             Title: "Businesses love us",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAEGDHjLsXk/10/0/400w-qLQxVs9xg-Q.jpg",
+            MediaUrl: Img6,
         },
         {
             Title: "We make presenting easy",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADaogF5JtM/5/0/400w-gOabQZ-2x58.jpg",
+            MediaUrl: Img7,
         },
         {
             Title: "Charu Create 2023",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADaosVPiEU/1/0/400w-HI9ygtHJxXI.jpg",
+            MediaUrl: Img8,
         },
         {
             Title: "We've got a desktop app",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADannRC2Cs/2/0/400w-zdxoayS1dW4.jpg",
+            MediaUrl: Img9,
         },
         {
             Title: "Businesses love us",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAEWSCtgF7E/1/0/400w-Ur_cwx4NbVE.jpg",
+            MediaUrl: Img10,
         },
         {
             Title: "We make presenting easy",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAEgGRQ-LHs/7/0/400w-zHUy6GwfcuI.jpg",
+            MediaUrl: Img11,
         },
         {
             Title: "We have a video editor",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADakBMT2L8/7/0/400w-wHZFkdNCb4g.jpg",
+            MediaUrl: Img12,
         },
         {
             Title: "Businesses love us",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EADao85M6_0/1/0/400w-4vwp1100Ykw.jpg",
+            MediaUrl: Img13,
         },
         {
             Title: "We make presenting easy",
             Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-            MediaUrl: "https://template.canva.com/EAD8SnpZkbk/2/0/400w-7el5iY3r3Cw.jpg",
+            MediaUrl: Img14,
         },
     ]
 
     return (
         <section id="products">
             <div className="flex flex-col justify-center pt-48 text-center">
-                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We are full of surprises</h1>
-                <p className='text-gray-600 text-lg mt-1 mb-20'>Here are some of our best traits you might not know about</p>
+                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Discover our incredible selection of templates</h1>
+                <p className='text-gray-600 text-lg mt-1 mb-20'>Find the perfect templates to enhance your creativity and productivity</p>
                 <Box sx={{}}>
                     <Masonry columns={x} spacing={2}>
                         {masonry.map((item, index) => (
                             <div key={index}>
                                 <a href={item.Url}>
                                     <Image
-                                        src={`${item.MediaUrl}?w=162&auto=format`}
+                                        src={item.MediaUrl}
                                         height={500}
                                         width={500}
                                         alt={item.Title}

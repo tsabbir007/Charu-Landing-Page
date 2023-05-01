@@ -15,7 +15,7 @@ export interface ServiceType {
 
 export interface FeatureType {
     IsVideoUrl: boolean;
-    MediaUrl: string;
+    MediaUrl: any;
     Title: string;
     Description: string;
     ButtonText: string;
@@ -31,7 +31,7 @@ export interface CarouselType {
 export interface MasonryType {
     Title: string;
     Url: string;
-    MediaUrl: string;
+    MediaUrl: any;
 }
 
 export interface FooterType {
@@ -39,5 +39,6 @@ export interface FooterType {
     Items: {
         Name: string;
         IsUpcomming: boolean;
+        Url: string;
     }[];
 }

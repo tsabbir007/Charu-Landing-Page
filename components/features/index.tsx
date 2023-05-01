@@ -4,6 +4,9 @@ import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
 import Image from "next/image";
+import Img1 from './images/feature-1.png'
+import Img2 from './images/feature-2.png'
+import Img3 from './images/feature-3.png'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -11,25 +14,25 @@ type Props = {
 
 const features: Array<FeatureType> = [
     {
-        IsVideoUrl: true,
-        MediaUrl: "https://static.canva.com/anon_home/benefits-start-en-1200x780-compressed.mp4",
-        Title: "Ready-made designs",
-        Description: "Benefit from thousands of professional templates, images, and quality content to choose from, for example when ordering new business cards or editing your next video.",
-        ButtonText: "Create a design",
-    },
-    {
-        IsVideoUrl: true,
-        MediaUrl: "https://static.canva.com/anon_home/benefits/benefits-collab-en-974x634.mp4",
-        Title: "Built for teamwork",
-        Description: "Invite people to edit with you or set your whole team up to manage brand assets, brainstorm on whiteboards, get approvals, and scale content with tools like docs.",
-        ButtonText: "Work together"
+        IsVideoUrl: false,
+        MediaUrl: Img1,
+        Title: "Pre-designed templates",
+        Description: "Take advantage of a vast array of professionally crafted designs, captivating visuals, and engaging content at your disposal. Whether you're looking to create eye-catching brochures or enhance your social media posts, our extensive library of templates, images, and top-notch content ensures that you'll always have the right tools to bring your vision to life.",
+        ButtonText: "Start designing",
     },
     {
         IsVideoUrl: false,
-        MediaUrl: "https://static.canva.com/anon_home/benefits/benefits-share-en-1288x838.jpg",
-        Title: "Too good not to share",
-        Description: "Whether you need to build a new website or print some posters, let your creations shine in the real world. Easily publish, download or share whatever you make in Canva.",
-        ButtonText: "Design your vision"
+        MediaUrl: Img2,
+        Title: "Designed to foster collaboration",
+        Description: "Encourage collaboration by inviting others to join you in editing or empower your entire team to oversee brand assets, engage in interactive brainstorming sessions on digital whiteboards, streamline approval processes, and enhance content production efficiency using tools such as document collaboration.",
+        ButtonText: "Learn more",
+    },
+    {
+        IsVideoUrl: false,
+        MediaUrl: Img3,
+        Title: "Too amazing to keep to myself.",
+        Description: "No matter if you're designing a brochure or creating a social media campaign, showcase your artistic talents in the physical realm. Seamlessly publish, download, or distribute your creations with ease using Charu",
+        ButtonText: "Create your own destiny",
     }
 ]
 
@@ -37,12 +40,10 @@ const features: Array<FeatureType> = [
 const Features = (props: Props) => {
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     const featureItems = features.map((feature, index) =>
-        <div  className={"flex flex-col justify-center pt-48 text-center"}>
-            <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>We are full of surprises</h1>
-            <p className='text-gray-600 text-lg mt-1'>Here are some of our best traits you might not know about</p>
+        <div className={"flex flex-col justify-center text-center"}>
             <div
                 key={index}
-                className={"mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}
+                className={"mt-16 md:mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}
             >
                 {feature.IsVideoUrl ? (<video src={feature.MediaUrl} autoPlay loop muted className="md:w-1/2 mt-8"></video>) : (
                     <Image
@@ -50,10 +51,10 @@ const Features = (props: Props) => {
                         height={500}
                         src={feature.MediaUrl}
                         alt="feature image"
-                        className="md:w-1/2 mt-8"
+                        className="md:w-1/2 md:mt-8"
                     />
                 )}
-                <div className="ps-10">
+                <div className="md:ps-10">
                     <HText>{feature.Title}</HText>
                     <motion.div
                         initial="hidden"
@@ -81,7 +82,9 @@ const Features = (props: Props) => {
 
     return (
         <section id="feature">
-            <div className="flex flex-col gap-4 mt-8 md:px-8 items-center">
+            <div className="flex flex-col gap-4 md:px-8 items-center md:mt-80 mt-32">
+                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
+                <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
                 {featureItems}
             </div>
         </section>
