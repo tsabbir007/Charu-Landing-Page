@@ -33,6 +33,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@types/react-anchor-link-smooth-scroll": "^1.0.2"
+    "@types/react-anchor-link-smooth-scroll": "^1.0.2",
+    "sass": "^1.62.1"
   }
 }
