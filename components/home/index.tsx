@@ -2,6 +2,7 @@ import { SelectedPage } from '@/shared/types'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/shared/ActionButton'
 import Image from 'next/image'
+import styles from './home.module.scss'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -20,49 +21,50 @@ const Home = (props: Props) => {
                 <div className="flex flex-col gap-4 mt-4">
                     <ActionButton setSelectedPage={props.setSelectedPage}> Get Started</ActionButton>
                 </div>
-                <div className='relative hidden md:block'>
+                <div className='relative hidden md:block mt-60'>
                     <div className='relative'>
                         <video src="https://content-management-files.canva.com/943bd1b3-ffd6-4892-a4df-b107cb33e657/hero-banner-en-1600x852.mp4" autoPlay loop className='mt-8'></video>
                     </div>
-                    <div className='absolute w-[150px] left-[-10%] max-w-[13%] top-[-14%]'>
-                        <Image
-                            src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
-                            alt="Picture of the author"
-                            width={300}
-                            height={300}
-                        >
+                    <div className={styles.relativeImages}>
+                        <div className='left-[-10%] top-[-14%]'>
+                            <Image
+                                src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
+                                alt="Picture of the author"
+                                width={300}
+                                height={300}
+                            >
 
-                        </Image>
-                    </div>
-                    <div className='absolute w-[150px] right-[-10%] max-w-[13%] top-[-14%]'>
-                        <Image
-                            src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
-                            alt="Picture of the author"
-                            width={300}
-                            height={300}
-                        >
+                            </Image>
+                        </div>
+                        <div className='right-[-10%] top-[-14%]'>
+                            <Image
+                                src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
+                                alt="Picture of the author"
+                                width={300}
+                                height={300}
+                            >
 
-                        </Image>
-                    </div>
-                    <div className='absolute w-[150px] left-[-10%] max-w-[13%] bottom-[-14%]'>
-                        <Image
-                            src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
-                            alt="Picture of the author"
-                            width={300}
-                            height={300}
-                        >
+                            </Image>
+                        </div>
+                        <div className='left-[-10%] bottom-[-14%]'>
+                            <Image
+                                src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
+                                alt="Picture of the author"
+                                width={300}
+                                height={300}
+                            >
 
-                        </Image>
-                    </div>
-                    <div className='absolute w-[150px] right-[-10%] max-w-[13%] bottom-[-14%]'>
-                        <Image
-                            src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
-                            alt="Picture of the author"
-                            width={300}
-                            height={300}
-                        >
-
-                        </Image>
+                            </Image>
+                        </div>
+                        <div className='right-[-10%] bottom-[-14%]'>
+                            <Image
+                                src="https://content-management-files.canva.com/cdn-cgi/image/format=auto,w=300/22f18aa3-ac5c-45b6-bd4a-93fbfdd754f2/template-1.jpg"
+                                alt="Picture of the author"
+                                width={300}
+                                height={300}
+                            >
+                            </Image>
+                        </div>
                     </div>
                 </div>
             </div>
