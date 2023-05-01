@@ -2,21 +2,22 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
+import { motion } from "framer-motion";
 import { MasonryType, SelectedPage } from '@/shared/types';
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from 'next/image';
 import Img1 from './images/charu-1.jpg';
-import Img2 from './images/charu-2.jpg';
-import Img3 from './images/charu-3.jpg';
+import Img10 from './images/charu-2.jpg';
+import Img12 from './images/charu-3.jpg';
 import Img4 from './images/charu-4.jpg';
 import Img5 from './images/charu-5.png';
 import Img6 from './images/charu-6.png';
 import Img7 from './images/charu-7.png';
 import Img8 from './images/charu-8.png';
 import Img9 from './images/charu-9.png';
-import Img10 from './images/charu-10.png';
+import Img2 from './images/charu-10.png';
 import Img11 from './images/charu-11.png';
-import Img12 from './images/charu-12.png';
+import Img3 from './images/charu-12.png';
 import Img13 from './images/charu-13.png';
 import Img14 from './images/charu-14.png';
 
@@ -35,7 +36,7 @@ type Props = {
 }
 
 
-export default function SSRMasonry() {
+const SSRMasonry = ({ setSelectedPage }: Props) => {
     const isAboveSmallScreens = useMediaQuery('(min-width: 640px)')
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
 
@@ -117,8 +118,10 @@ export default function SSRMasonry() {
     ]
 
     return (
-        <section id="products">
-            <div className="flex flex-col justify-center pt-48 text-center">
+        <section id="templates">
+            <motion.div className="flex flex-col justify-center pt-48 text-center"
+                onViewportEnter={() => setSelectedPage(SelectedPage.Templates)}
+            >
                 <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Discover our incredible selection of templates</h1>
                 <p className='text-gray-600 text-lg mt-1 mb-20'>Find the perfect templates to enhance your creativity and productivity</p>
                 <Box sx={{}}>
@@ -144,7 +147,9 @@ export default function SSRMasonry() {
                         ))}
                     </Masonry>
                 </Box>
-            </div>
+            </motion.div>
         </section>
     );
 }
+
+export default SSRMasonry;

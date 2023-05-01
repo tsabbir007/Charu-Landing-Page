@@ -8,6 +8,7 @@ import Img2 from './images/charu-6.png'
 import Img3 from './images/charu-8.png'
 import Img4 from './images/charu-5.png'
 // import Promo from './videos/promo.mp4'
+import Link from 'next/link'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -24,7 +25,13 @@ const Home = (props: Props) => {
                 <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}
                 <div className="flex flex-col gap-4 mt-5">
-                    <ActionButton setSelectedPage={props.setSelectedPage}> Get Started</ActionButton>
+                    <Link
+                        className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
+                        style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem' }}
+                        href="#features"
+                    >
+                        Get Started
+                    </Link>
                 </div>
                 <div className='relative mt-24 md:mt-60'>
                     <div className='relative md:max-w-[80%] mx-auto'>

@@ -51,12 +51,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 setSelectedPage={setSelectedPage}
               />
               <AnchorLink
-                page="Feature"
+                page="Features"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
               <AnchorLink
-                page="Products"
+                page="Templates"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
@@ -93,12 +93,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               setSelectedPage={setSelectedPage}
             />
             <AnchorLink
-              page="Feature"
+              page="Features"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />
             <AnchorLink
-              page="Products"
+              page="Templates"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

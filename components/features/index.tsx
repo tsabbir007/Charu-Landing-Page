@@ -7,6 +7,8 @@ import Image from "next/image";
 import Img1 from './images/feature-1.png'
 import Img2 from './images/feature-2.png'
 import Img3 from './images/feature-3.png'
+//import viewport
+
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -37,7 +39,8 @@ const features: Array<FeatureType> = [
 ]
 
 
-const Features = (props: Props) => {
+const Features = ({ setSelectedPage }: Props) => {
+    console.log("Hello1");
     const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     const featureItems = features.map((feature, index) =>
         <div
@@ -71,7 +74,7 @@ const Features = (props: Props) => {
                         </p>
                     </motion.div>
                     <div className="mt-10">
-                        <ActionButton setSelectedPage={props.setSelectedPage}>
+                        <ActionButton setSelectedPage={setSelectedPage}>
                             {feature.ButtonText}
                         </ActionButton>
                     </div>
@@ -81,12 +84,14 @@ const Features = (props: Props) => {
     );
 
     return (
-        <section id="feature">
-            <div className="flex flex-col gap-4 md:px-8 items-center md:mt-80 mt-32">
+        <section id="features">
+            <motion.div className="flex flex-col gap-4 md:px-8 items-center pt-52"
+                onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
+            >
                 <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
                 <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
                 {featureItems}
-            </div>
+            </motion.div>
         </section>
     )
 }

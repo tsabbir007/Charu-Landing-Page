@@ -4,14 +4,16 @@ import { useEffect } from "react";
 import { SelectedPage } from "@/shared/types";
 import Navbar from "@/components/navbar";
 import Home from "@/components/home";
-import Feature from "@/components/features";
+import Features from "@/components/features";
 import Services from "@/components/services";
-import Masonry from "@/components/masonry";
+import Templates from "@/components/masonry";
 import Carousel from "@/components/carousel";
 import Footer from "@/components/footer";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
   useEffect(() => {
@@ -36,9 +38,9 @@ function App() {
       {/* container */}
       <div className="container mx-auto px-5 md:px-36">
         <Home setSelectedPage={setSelectedPage} />
-        <Feature setSelectedPage={setSelectedPage} />
+        <Features setSelectedPage={setSelectedPage} />
         {/* <Services setSelectedPage={setSelectedPage} /> */}
-        <Masonry />
+        <Templates setSelectedPage={setSelectedPage}/>
       </div>
       <div className="px-6">
         <Carousel setSelectedPage={setSelectedPage} />

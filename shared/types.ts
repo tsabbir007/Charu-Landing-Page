@@ -1,8 +1,8 @@
 export enum SelectedPage {
     Home = "home",
-    Services = "services",
-    Products = "products",
-    About = "about",
+    Features = "features",
+    Templates = "templates",
+    Blogs = "blogs",
     Charu = "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
 }
 
