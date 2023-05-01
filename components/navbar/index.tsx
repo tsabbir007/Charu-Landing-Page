@@ -5,6 +5,7 @@ import AnchorLink from "./AnchorLink";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
+import Link from "next/link";
 
 type Props = {
   isTopOfPage: boolean;
@@ -33,9 +34,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <div>
               {/* <img alt="logo" src={Logo} className="w-10" /> */}
               <h1 className="text-3xl font-sand font-bold">
-                <a href="#">
+                <Link href="/">
                   Charu
-                </a>
+                </Link>
               </h1>
             </div>
           )}
