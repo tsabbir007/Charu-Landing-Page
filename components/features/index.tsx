@@ -1,5 +1,4 @@
 import HText from "@/shared/HText";
-import useMediaQuery from '@/hooks/useMediaQuery'
 import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
@@ -40,8 +39,6 @@ const features: Array<FeatureType> = [
 
 
 const Features = ({ setSelectedPage }: Props) => {
-    console.log("Hello1");
-    const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     const featureItems = features.map((feature, index) =>
         <div
             key={index}
