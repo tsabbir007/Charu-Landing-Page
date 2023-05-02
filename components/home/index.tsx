@@ -35,7 +35,7 @@ const Home = (props: Props) => {
                 </div>
                 <div className='relative mt-24 md:mt-60'>
                     <div className='relative md:max-w-[80%] mx-auto'>
-                        <video src={"/video-1.mp4"} autoPlay loop muted className='mt-8'></video>
+                        <video src={"/promo-video.mp4"} autoPlay loop muted className='mt-8'></video>
                     </div>
                     <div className={`${styles.relativeImages} hidden md:block`}>
                         <div className='left-[0%] top-[-14%]'>
