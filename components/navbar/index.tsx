@@ -8,12 +8,13 @@ import ActionButton from "@/shared/ActionButton";
 import Link from "next/link";
 
 type Props = {
+  isMainPage: boolean;
   isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isMainPage, isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
@@ -43,7 +44,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               </h1>
             </div>
           </div>
-          {isAboveMediumScreens && (
+          {isAboveMediumScreens && isMainPage && (
             <div className={`${flexBetween} gap-20 items-center`}>
               <AnchorLink
                 page="Home"

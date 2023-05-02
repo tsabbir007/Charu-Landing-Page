@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="app">
       <Navbar
+        isMainPage = {true}
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}

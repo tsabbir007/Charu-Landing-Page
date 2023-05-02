@@ -27,6 +27,7 @@ const PrivacyPolicy = (props: Props) => {
     return (
         <section>
             <Navbar
+                isMainPage = {false}
                 isTopOfPage={isTopOfPage}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
