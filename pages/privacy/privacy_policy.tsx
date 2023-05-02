@@ -75,7 +75,7 @@ const PrivacyPolicy = (props: Props) => {
                             (b) Information Automatically Collected:
                         </p>
                         <p className="my-10">
-                            We collect information about your interactions with our app, such as the features you use, the duration of your sessions, and the actions you take. This helps us analyze user behavior and improve the app's functionality.  We automatically collect certain device-related information, including your device type, operating system, unique device identifiers, and mobile network information. This data helps us ensure compatibility and optimize our app for various devices. Our servers may automatically record log information when you use our app. This may include your IP address, app crashes, and system activity. We use this data for troubleshooting and ensuring the app's stability.
+                            We collect information about your interactions with our app, such as the features you use, the duration of your sessions, and the actions you take. This helps us analyze user behavior and improve the app&apos;s functionality.  We automatically collect certain device-related information, including your device type, operating system, unique device identifiers, and mobile network information. This data helps us ensure compatibility and optimize our app for various devices. Our servers may automatically record log information when you use our app. This may include your IP address, app crashes, and system activity. We use this data for troubleshooting and ensuring the app&apos;s stability.
                         </p>
                         <p className="my-10 font-bold text-md">
                             (c) Cookies and Similar Technologies:
@@ -104,20 +104,20 @@ const PrivacyPolicy = (props: Props) => {
                         </p>
                         <p className="my-10">
                             We use the information you provide, such as your account details and content creations, to deliver personalized features and functionality within the app.
-                            By understanding your preferences and usage patterns, we can tailor the app's interface, recommendations, and suggestions to enhance your experience.
+                            By understanding your preferences and usage patterns, we can tailor the app&apos;s interface, recommendations, and suggestions to enhance your experience.
                         </p>
                         <p className="my-10 font-bold text-md">
                             (b) Communication and Customer Support:
                         </p>
                         <p className="my-10">
                             We may use your contact information to respond to your inquiries, provide support, and address any issues you may encounter while using our app.
-                            We may also send you important updates or notifications related to the app's features, changes, or improvements.
+                            We may also send you important updates or notifications related to the app&apos;s features, changes, or improvements.
                         </p>
                         <p className="my-10 font-bold text-md">
                             (c) Improving the App:
                         </p>
                         <p className="my-10">
-                            Analyzing user behavior and usage data helps us identify areas for improvement and optimize the app's performance and functionality.
+                            Analyzing user behavior and usage data helps us identify areas for improvement and optimize the app&apos;s performance and functionality.
                             We may use aggregated and anonymized data to conduct research, generate insights, and develop new features to enhance the overall user experience.
                         </p>
                         <p className="my-10 font-bold text-md">
@@ -143,7 +143,7 @@ const PrivacyPolicy = (props: Props) => {
                             </p>
                         </div>
                         <p className="my-10">
-                            By using our app and providing your information, you consent to the uses described above. You have the right to modify your privacy preferences and control the use of your data within the app's settings.
+                            By using our app and providing your information, you consent to the uses described above. You have the right to modify your privacy preferences and control the use of your data within the app&apos;s settings.
                         </p>
                     </div>
                     <div>
@@ -151,7 +151,7 @@ const PrivacyPolicy = (props: Props) => {
                             3. Data Sharing:
                         </p>
                         <p className="my-10">
-                            At Charu, we understand the importance of your privacy and are committed to protecting your personal information. We only share your data in limited circumstances and with trusted third parties who assist us in providing and improving our mobile application, Photo Editor & Design - Charu. Here's how we handle data sharing:
+                            At Charu, we understand the importance of your privacy and are committed to protecting your personal information. We only share your data in limited circumstances and with trusted third parties who assist us in providing and improving our mobile application, Photo Editor & Design - Charu. Here&apos;s how we handle data sharing:
                         </p>
                         <p className="my-10 font-bold text-md">
                             (a) Service Providers:
@@ -185,10 +185,10 @@ const PrivacyPolicy = (props: Props) => {
                         </p>
                         <p className="my-10">
                             We will obtain your explicit consent before sharing your personal information with third parties for marketing purposes.
-                            You have the option to opt-out of certain data sharing practices, such as personalized advertising, by modifying your privacy preferences within the app's settings.
+                            You have the option to opt-out of certain data sharing practices, such as personalized advertising, by modifying your privacy preferences within the app&apos;s settings.
                         </p>
                         <p className="my-10">
-                            It's important to note that we do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent.
+                            It&apos;s important to note that we do not sell or rent your personal information to third parties for their marketing purposes without your explicit consent.
                         </p>
                         <p className="my-10">
                             We take reasonable measures to ensure that any third parties we share your information with are reputable and maintain appropriate security measures. However, we cannot be responsible for the actions or policies of these third parties.
@@ -202,7 +202,7 @@ const PrivacyPolicy = (props: Props) => {
                             4. Security:
                         </p>
                         <p className="my-10">
-                            At Charu, we prioritize the security of your personal information and take appropriate measures to protect it from unauthorized access, disclosure, alteration, or destruction. We have implemented technical, administrative, and physical safeguards to ensure the confidentiality and integrity of your data. Here's how we approach security:
+                            At Charu, we prioritize the security of your personal information and take appropriate measures to protect it from unauthorized access, disclosure, alteration, or destruction. We have implemented technical, administrative, and physical safeguards to ensure the confidentiality and integrity of your data. Here&apos;s how we approach security:
                         </p>
                         <p className="my-10 font-bold text-md">
                             (a) Data Encryption:
@@ -238,7 +238,7 @@ const PrivacyPolicy = (props: Props) => {
                         <p className="my-10">
                             While we take reasonable measures to protect your information, it is important for you to also take precautions to safeguard your personal data.
                             We recommend using strong and unique passwords for your Charu account and regularly updating them.
-                            It is advisable to keep your device's operating system and security software up to date to protect against potential security vulnerabilities.
+                            It is advisable to keep your device&apos;s operating system and security software up to date to protect against potential security vulnerabilities.
                         </p>
                         <p className="my-10">
                             Despite our best efforts, no method of transmission or storage can guarantee 100% security. Therefore, we cannot guarantee the absolute security of your data. If you believe your account has been compromised or if you have any concerns about the security of your information, please contact us immediately.
@@ -254,13 +254,13 @@ const PrivacyPolicy = (props: Props) => {
                     </div>
                     <div>
                         <p className="font-bold text-2xl mt-10">
-                            5. Children's Privacy:
+                            5. Children&apos;s Privacy:
                         </p>
                         <p className="my-10">
                             At Charu, we are committed to protecting the privacy of children. Our mobile application, Photo Editor & Design - Charu, is not intended for use by individuals under the age of 13. We do not knowingly collect or solicit personal information from children without appropriate parental consent. If we become aware that we have inadvertently collected personal information from a child under 13, we will take immediate steps to delete that information from our records.
                         </p>
                         <p className="my-10">
-                            Here are the key points regarding children's privacy:
+                            Here are the key points regarding children&apos;s privacy:
                         </p>
                         <p className="my-10 font-bold text-md">
                             (a) Age Restriction:
@@ -273,7 +273,7 @@ const PrivacyPolicy = (props: Props) => {
                             (b) Parental Consent:
                         </p>
                         <p className="my-10">
-                            We recommend that parents and guardians supervise their children's activities and use of our app.
+                            We recommend that parents and guardians supervise their children&apos;s activities and use of our app.
                             If we determine that personal information of a child under 13 has been provided to us without appropriate parental consent, we will delete that information from our records as soon as possible.
                         </p>
                         <p className="my-10 font-bold text-md">
@@ -286,7 +286,7 @@ const PrivacyPolicy = (props: Props) => {
                             (d) Parental Rights:
                         </p>
                         <p className="my-10">
-                            Parents and legal guardians have the right to review and request the deletion of their child's personal information that may have been inadvertently collected by us.
+                            Parents and legal guardians have the right to review and request the deletion of their child&apos;s personal information that may have been inadvertently collected by us.
                             If you are a parent or guardian and wish to access, modify, or delete any personal information of your child, please contact us using the provided contact information.
                         </p>
                         <p className="my-10">
@@ -306,7 +306,7 @@ const PrivacyPolicy = (props: Props) => {
                             At Charu, we may update our Privacy Policy from time to time to reflect changes in our practices, services, or applicable laws and regulations. We encourage you to periodically review the Privacy Policy to stay informed about how we collect, use, and protect your personal information. When we make significant changes to the Privacy Policy, we will provide a prominent notice within the app or notify you through other means, such as email or push notification.
                         </p>
                         <p className="my-10">
-                            Here's how we handle updates to the Privacy Policy:
+                            Here&apos;s how we handle updates to the Privacy Policy:
                         </p>
                         <p className="my-10 font-bold text-md">
                             (a) Notification of Changes:

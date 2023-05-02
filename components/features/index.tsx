@@ -32,7 +32,7 @@ const features: Array<FeatureType> = [
     {
         IsVideoUrl: false,
         MediaUrl: Img3,
-        Title: "Too amazing to keep to myself.",
+        Title: "Too amazing to keep to myself",
         Description: "No matter if you're designing a brochure or creating a social media campaign, showcase your artistic talents in the physical realm. Seamlessly publish, download, or distribute your creations with ease using Charu",
         ButtonText: "Create your own destiny",
     }

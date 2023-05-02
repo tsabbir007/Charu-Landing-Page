@@ -47,7 +47,7 @@ const TermConditions = (props: Props) => {
                         This Terms & Conditions is effective as of May 5, 2023.
                     </p>
                     <p className="mb-10 italic">
-                        These Terms and Conditions ("Terms") govern your use of the mobile application ("App") provided by <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span>, a company registered in Bangladesh. By accessing or using the App, you agree to be bound by these Terms. If you do not agree with any provision of these Terms, you should not use the App.
+                        These Terms and Conditions (&quot;Terms&quot;) govern your use of the mobile application (&quot;App&quot;) provided by <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span>, a company registered in Bangladesh. By accessing or using the App, you agree to be bound by these Terms. If you do not agree with any provision of these Terms, you should not use the App.
                     </p>
                     <span className="font-bold text-3xl my-10 font-sand"> What does this terms & conditions cover</span>
                     <p className="my-10">
@@ -142,7 +142,7 @@ const TermConditions = (props: Props) => {
                             6. Disclaimer of Warranties:
                         </p>
                         <p className="my-10">
-                            (a) The App is provided on an "as is" and "as available" basis, without any warranties or representations, express or implied.
+                            (a) The App is provided on an &quot;as is&quot; and &quot;as available&quot; basis, without any warranties or representations, express or implied.
                             (b) <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> does not warrant that the App will be error-free, uninterrupted, secure, or free from viruses or other harmful components.
                         </p>
                     </div>
