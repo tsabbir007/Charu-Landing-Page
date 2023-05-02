@@ -43,37 +43,133 @@ const TermConditions = (props: Props) => {
                 </div>
                 <div className="mt-10 px-8 sm:px-0">
                     <p className="my-10">
-                        This Privacy Policy is effective as of February 7, 2023. See previous versions of the Privacy Policy in our Policy Archives.
+                        This Terms & Conditions is effective as of May 5, 2023.
                     </p>
                     <p className="mb-10 italic">
-                        The highlighted text is aimed to give a plain English summary of our Privacy Policy. Please ensure you read the main text, as the plain English summary is just a summary and doesnot capture all of the terms.
+                        These Terms and Conditions ("Terms") govern your use of the mobile application ("App") provided by <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span>, a company registered in Bangladesh. By accessing or using the App, you agree to be bound by these Terms. If you do not agree with any provision of these Terms, you should not use the App.
                     </p>
-                    <span className="font-bold text-3xl my-10 font-sand"> What does this policy cover</span>
+                    <span className="font-bold text-3xl my-10 font-sand"> What does this terms & conditions cover</span>
                     <p className="my-10">
-                        Welcome to Charu, the online and mobile service of Charu Pty Ltd . Our Privacy Policy explains how we collect, use, disclose, and protect information that applies to our visual communication platform , and your choices about the collection and use of your information. Capitalized terms that are not defined in this Privacy Policy have the meaning given to them in our Terms of Use. If you do not want your information processed in accordance with this Privacy Policy in general or any part of it, you should not use our Service. This policy applies to all users of the Service, including, but not limited to users of our Developer Portal.
+                        These Terms and Conditions cover the use of the <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> mobile application in Bangladesh, including eligibility requirements, intellectual property rights, user-generated content, privacy practices, prohibited conduct, disclaimers, liability limitations, and the governing law. Users must agree to these terms when accessing and using the app.
                     </p>
                     <div className="bg-c2deff p-4 rounded">
                         <p className="italic">
-                            Summary: Welcome, here is our policy on privacy. This policy sets out how Charu collects and uses the information that we collect about you when you use the Service. This policy also explains the choices that you can make about the way that we use your information.
+                            Summary: These Terms and Conditions govern your use of the <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> mobile application in Bangladesh. By using the app, you agree to the terms, including eligibility, intellectual property, user content, privacy, prohibited conduct, disclaimers, liability limitations, and governing law. <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> may update the terms without notice. Use the app responsibly and be aware of your responsibilities regarding content and account security.
                         </p>
                     </div>
-                    <p className="font-bold text-2xl mt-10">
-                        1. Information we collect
-                        We collect the following types of information about you:
-                    </p>
-                    <p className="my-10 font-bold text-md">
-                        (a) Information you provide us directly
-                    </p>
-                    <p className="my-10">
-
-                        We may ask for certain information when you register for a Charu account or correspond with us (such as a username, your first and last names, birthdate, phone number, profession, physical and e-mail address).
-
-                        We also collect any messages you send us through the Service, and may collect information you provide in User Content you post to the Service (such as text and photos you upload to use in your designs). We use this information to operate, maintain, and provide the features and functionality of the Service to you, to correspond with you, and to address any issues you raise about the Service.
-
-                        If you donot provide your personal information to us, you may not be able to access or use our Service or your experience of using our Service may not be as enjoyable.
-
-                        Summary: We collect info about you that you choose to give us, for example when you register an account, use the Service or otherwise interact with us.
-                    </p>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            1. Use of the App:
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (a) Eligibility:
+                        </p>
+                        <p className="my-10">
+                            You must be at least 13 years old to use the App. By using the App, you represent that you are at least 13 years old or have obtained appropriate parental consent.
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (b) License:
+                        </p>
+                        <p className="my-10">
+                            <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> grants you a limited, non-exclusive, non-transferable, and revocable license to use the App for personal, non-commercial purposes, subject to these Terms.
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (c) User Account:
+                        </p>
+                        <p className="my-10">
+                            In order to access certain features or services within the App, you may need to create a user account. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            2.Intellectual Property:
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (a) Ownership:
+                        </p>
+                        <p className="my-10">
+                            <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> retains all rights, title, and interest in and to the App, including all intellectual property rights.
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (b) Restrictions:
+                        </p>
+                        <p className="my-10">
+                            You agree not to modify, distribute, reproduce, transmit, display, perform, publish, license, create derivative works from, transfer, or sell any information, software, products, or services obtained from or through the App without prior written permission from <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span>.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            3. User Content:
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (a) Responsibility:
+                        </p>
+                        <p className="my-10">
+                            You are solely responsible for any content, including text, images, and other materials, that you create, upload, or share through the App.
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (b) Permissions:
+                        </p>
+                        <p className="my-10">
+                            By uploading or sharing content, you grant <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> a worldwide, royalty-free, non-exclusive license to use, reproduce, modify, adapt, publish, translate, distribute, perform, and display the content for the purpose of providing and improving the App.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            4. Privacy:
+                        </p>
+                        <p className="my-10 font-bold text-md">
+                            (a) Data Collection:
+                        </p>
+                        <p className="my-10">
+                            <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> collects and processes personal information in accordance with its Privacy Policy. By using the App, you consent to the collection, use, and disclosure of your personal information as described in the Privacy Policy.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            5. Prohibited Conduct:
+                        </p>
+                        <p className="my-10">
+                            (a) You agree not to use the App for any unlawful, harmful, or unauthorized purposes.
+                        </p>
+                        <p className="my-10">
+                            (b) You agree not to interfere with or disrupt the operation of the App or the servers or networks connected to the App.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">
+                            6. Disclaimer of Warranties:
+                        </p>
+                        <p className="my-10">
+                            (a) The App is provided on an "as is" and "as available" basis, without any warranties or representations, express or implied.
+                            (b) <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> does not warrant that the App will be error-free, uninterrupted, secure, or free from viruses or other harmful components.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">Limitation of Liability:</p>
+                        <p className="my-10">
+                            (a) To the maximum extent permitted by applicable law, <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> shall not be liable for any direct, indirect, incidental, consequential, or special damages arising out of or in connection with the use or inability to use the App.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">7. Governing Law and Dispute Resolution:</p>
+                        <p className="my-10">
+                            (a) These Terms shall be governed by and construed in accordance with the laws of Bangladesh.
+                            (b) Any dispute arising out of or relating to these Terms or the use of the App shall be subject to the exclusive jurisdiction of the courts of Bangladesh.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">8. Changes to the Terms:</p>
+                        <p className="my-10">
+                            <span><a href="https://liilab.com" className="text-blue-500">LII Lab</a></span> may update these Terms from time to time. If we make material changes, we will provide advance notice to you either by email, by posting a notification within the App, or by posting an updated version of these Terms on our website. Your continued use of the App after the effective date of an updated version of these Terms constitutes your acceptance of the updated Terms.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-2xl mt-10">9. Contact Us:</p>
+                        <p className="my-10">
+                            If you have any questions about these Terms, please contact us at <a href="mailto:mail.liilab.com" className="text-blue-500">mail.liilab.com</a>.
+                        </p>
+                    </div>
                 </div>
             </div>
             <Footer setSelectedPage={setSelectedPage} />
