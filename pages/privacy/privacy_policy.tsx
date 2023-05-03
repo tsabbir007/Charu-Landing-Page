@@ -33,7 +33,7 @@ const PrivacyPolicy = (props: Props) => {
                 setSelectedPage={setSelectedPage}
             />
             <div className="container mt-32 mx-auto md:px-36">
-                <Breadcrumbs separator="›" aria-label="breadcrumb" className="ms-8 sm:ms-0">
+                <Breadcrumbs separator="›" aria-label="breadcrumb" className="ms-8 md:ms-0">
                     <Link underline="hover" color="black" href="/">
                         Home
                     </Link>

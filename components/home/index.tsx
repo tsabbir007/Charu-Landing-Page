@@ -15,12 +15,11 @@ type Props = {
 }
 
 const Home = (props: Props) => {
-    const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
     return (
         <section
             id="home"
         >
-            <div className="flex flex-col justify-center items-center pt-40 md:pt-52 text-center px-5">
+            <div className="flex flex-col justify-center items-center pt-40 md:pt-52 text-center px-5 mb-10">
                 <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-5'>Unleashing Creativity: What is Your Next Masterpiece?</h1>
                 <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}

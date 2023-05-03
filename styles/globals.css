@@ -12,3 +12,6 @@ body{
   width: 100%;
   font-family: 'Noto Sans', sans-serif;
 }
+a:hover{
+  color: #8b3dff;
+}
