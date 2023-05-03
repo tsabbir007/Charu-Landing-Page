@@ -33,7 +33,7 @@ const TermConditions = (props: Props) => {
                 setSelectedPage={setSelectedPage}
             />
             <div className="container mt-32 mx-auto md:px-36">
-                <Breadcrumbs separator="›" aria-label="breadcrumb" className="ms-8 sm:ms-0">
+                <Breadcrumbs separator="›" aria-label="breadcrumb" className="ms-8 md:ms-0">
                     <Link underline="hover" color="black" href="/">
                         Home
                     </Link>
@@ -168,7 +168,7 @@ const TermConditions = (props: Props) => {
                     <div>
                         <p className="font-bold text-2xl mt-10">9. Contact Us:</p>
                         <p className="my-10">
-                            If you have any questions about these Terms, please contact us at <a href="mailto:mail.liilab.com" className="text-blue-500">mail.liilab.com</a>.
+                            If you have any questions about these Terms, please contact us at <a href="mailto:mail.liilab@gmail.com" className="text-blue-500">mail.liilab@gmail.com</a>.
                         </p>
                     </div>
                 </div>
