@@ -3,9 +3,9 @@ import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
 import Image from "next/image";
-import Img1 from './images/feature-1.png'
-import Img2 from './images/feature-2.png'
-import Img3 from './images/feature-3.png'
+import Img1 from './images/feature1.jpg'
+import Img2 from './images/feature2.jpg'
+import Img3 from './images/feature3.jpg'
 //import viewport
 
 
@@ -42,7 +42,7 @@ const Features = ({ setSelectedPage }: Props) => {
     const featureItems = features.map((feature, index) =>
         <div
             key={index}
-            className={"flex flex-col justify-center text-center"}
+            className={"flex flex-col justify-center text-start"}
         >
             <div className={"mt-16 md:mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}>
                 {feature.IsVideoUrl ? (<video src={feature.MediaUrl} autoPlay loop muted className="md:w-1/2 mt-8"></video>) : (
@@ -51,7 +51,7 @@ const Features = ({ setSelectedPage }: Props) => {
                         height={500}
                         src={feature.MediaUrl}
                         alt="feature image"
-                        className="md:w-1/2 md:mt-8"
+                        className="md:w-1/2 md:mt-8 rounded"
                     />
                 )}
                 <div className="md:ps-10">
