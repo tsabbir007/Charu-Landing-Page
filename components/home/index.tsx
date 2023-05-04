@@ -4,9 +4,9 @@ import ActionButton from '@/shared/ActionButton'
 import Image from 'next/image'
 import styles from './home.module.scss'
 import Img1 from './images/charu-1.jpg'
-import Img2 from './images/charu-6.png'
-import Img3 from './images/charu-8.png'
-import Img4 from './images/charu-5.png'
+import Img2 from './images/charu2.jpg'
+import Img3 from './images/charu3.jpg'
+import Img4 from './images/charu4.jpg'
 // import Promo from './videos/promo.mp4'
 import Link from 'next/link'
 
@@ -16,10 +16,10 @@ type Props = {
 
 const Home = (props: Props) => {
     return (
-        <section
+        <div
             id="home"
         >
-            <div className="flex flex-col justify-center items-center pt-40 md:pt-52 text-center px-5 mb-10">
+            <div className="flex flex-col justify-center items-center pt-[135px] text-center px-5 mb-10">
                 <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-5'>Unleashing Creativity: What is Your Next Masterpiece?</h1>
                 <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}
@@ -32,54 +32,59 @@ const Home = (props: Props) => {
                         Get Started
                     </Link>
                 </div>
-                <div className='relative mt-24 md:mt-60'>
-                    <div className='relative md:max-w-[80%] mx-auto'>
+                <div className='relative mt-5 md:mt-10'>
+                    {/* mt-24 md:mt-60 */}
+                    <div className='relative md:max-w-[50%] mx-auto'>
                         <video src={"/promo-video.mp4"} autoPlay loop muted className='ms-7 mt-8'></video>
                     </div>
                     <div className={`${styles.relativeImages} hidden md:block`}>
-                        <div className='left-[0%] top-[-14%]'>
+                        <div className='left-[10%] top-[-14%]'>
                             <Image
                                 src={Img1}
                                 alt="Picture of the author"
                                 width={500}
                                 height={500}
+                                className='max-w-[120%] rounded'
                             >
 
                             </Image>
                         </div>
-                        <div className='right-[0%] top-[-14%]'>
+                        <div className='right-[12%] top-[0%]'>
                             <Image
                                 src={Img2}
                                 alt="Picture of the author"
                                 width={500}
                                 height={500}
+                                className='max-w-[180%] rounded'
                             >
 
                             </Image>
                         </div>
-                        <div className='left-[0%] bottom-[-14%]'>
+                        <div className='left-[0%] bottom-[5%]'>
                             <Image
                                 src={Img3}
                                 alt="Picture of the author"
                                 width={500}
                                 height={500}
+                                className='max-w-[180%] rounded'
                             >
 
                             </Image>
                         </div>
-                        <div className='right-[0%] bottom-[-14%]'>
+                        <div className='right-[10%] bottom-[-5%]'>
                             <Image
                                 src={Img4}
                                 alt="Picture of the author"
                                 width={500}
                                 height={500}
+                                className='max-w-[180%] rounded'
                             >
-                            </Image>
+                            </Image> 
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
