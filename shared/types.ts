@@ -1,78 +1,70 @@
 export enum SelectedPage {
-    Home = "home",
-    Features = "features",
-    Templates = "templates",
-    Blogs = "blogs",
-    Charu = "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
+  Home = "home",
+  Features = "features",
+  Templates = "templates",
+  Blogs = "blogs",
+  Charu = "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
 }
 
 export interface ServiceType {
-    IsPaid: boolean;
-    Title: string;
-    Description: string;
-    ButtonText: string;
+  IsPaid: boolean;
+  Title: string;
+  Description: string;
+  ButtonText: string;
 }
 
 export interface FeatureType {
-    IsVideoUrl: boolean;
-    MediaUrl: any;
-    Title: string;
-    Description: string;
-    ButtonText: string;
+  IsVideoUrl: boolean;
+  MediaUrl: any;
+  Title: string;
+  Description: string;
+  ButtonText: string;
 }
 
 export interface CarouselType {
-    Title: string;
-    Url: string;
-    Description: string;
-    MediaUrl: string;
+  Title: string;
+  Url: string;
+  Description: string;
+  MediaUrl: string;
 }
 
 export interface MasonryType {
-    Title: string;
-    Url: string;
-    MediaUrl: any;
+  Title: string;
+  Url: string;
+  MediaUrl: any;
 }
 
 export interface FooterType {
-    Title: string;
-    Items: {
-        Name: string;
-        IsUpcomming: boolean;
-        Url: string;
-    }[];
+  Title: string;
+  Items: {
+    Name: string;
+    IsUpcomming: boolean;
+    Url: string;
+  }[];
 }
 
 
 
 export interface Post {
-    date: string;
-    slug: string;
-    title: string;
-    excerpt: string;
-    featuredImage: {
-      node: {
-        mediaDetails: {
-          file: string;
-          sizes: {
-            sourceUrl: string;
-            width: number;
-            height: number;
-          }[];
+  slug: string;
+  title: string;
+  excerpt: string;
+  featuredImage: {
+    node: {
+      mediaDetails: {
+        file: string;
+        sizes: {
+          sourceUrl: string;
+          width: number;
+          height: number;
         };
       };
     };
-    categories: {
-      nodes: {
-        name: string;
-        slug: string;
-      }[];
-    };
-  }
-  
+  };
+}
 
-  
 
-  
 
-  
+
+
+

@@ -14,22 +14,14 @@ type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
-export async function getStaticProps() {
-  const allPosts = await getAllPosts();
 
-  return {
-    props: {
-      allPosts: allPosts.data.post.nodes,
-    },
-  };
-}
 
-const Carousel = ({ setSelectedPage, }: Props) => {
+const Carousel = ({ setSelectedPage}: Props) => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await getAllPosts();
+      const res : Post[]= await getAllPosts();
       setPosts(res);
     };
     fetchPosts();
@@ -44,7 +36,7 @@ const Carousel = ({ setSelectedPage, }: Props) => {
 
   const CarouselItems = posts.map((post, index) => (
     <div key={index} className="flex flex-col gap-4 keen-slider__slide">
-      <a href={post.slug}>
+      <a href={`/blog/${post.slug}`}>
         <Image
           width={post.featuredImage.node.mediaDetails.sizes[0].width}
           height={post.featuredImage.node.mediaDetails.sizes[0].height}
