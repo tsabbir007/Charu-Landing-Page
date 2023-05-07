@@ -1,16 +1,40 @@
 import { useKeenSlider } from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
-import { CarouselType, SelectedPage } from "@/shared/types";
+import { SelectedPage, Post } from "@/shared/types";
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { getAllPosts } from "@/lib/posts";
+import Link from "next/link";
+
 
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void
 }
 
-const Carousel = ({ setSelectedPage }: Props) => {
+export async function getStaticProps() {
+  const allPosts = await getAllPosts();
+
+  return {
+    props: {
+      allPosts: allPosts.data.post.nodes,
+    },
+  };
+}
+
+const Carousel = ({ setSelectedPage, }: Props) => {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = await getAllPosts();
+      setPosts(res);
+    };
+    fetchPosts();
+  }, []);
+
   const isAboveSmallScreens = useMediaQuery('(min-width: 640px)')
   const isAboveMediumScreens = useMediaQuery('(min-width: 1060px)')
 
@@ -18,70 +42,22 @@ const Carousel = ({ setSelectedPage }: Props) => {
   if (isAboveSmallScreens) x = 3;
   if (isAboveMediumScreens) x = 5;
 
-  const carousels: Array<CarouselType> = [
-    {
-      Title: "Businesses love us",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
-      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
-    },
-    {
-      Title: "We make presenting easy",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "Take the stress out of preparing and presenting with our go-to decks.",
-      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
-    },
-    {
-      Title: "Businesses love us",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
-      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
-    },
-    {
-      Title: "We make presenting easy",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "Take the stress out of preparing and presenting with our go-to decks.",
-      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
-    },
-    {
-      Title: "Businesses love us",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
-      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
-    },
-    {
-      Title: "We make presenting easy",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "Take the stress out of preparing and presenting with our go-to decks.",
-      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
-    },
-    {
-      Title: "Businesses love us",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "See how teams of all sizes are using charu to manage their workflows and create together.",
-      MediaUrl: "https://content-management-files.canva.com/e6b1f1e7-00a1-49d2-920d-a3ca85edaccf/enterpriseCaseStudies-en-500x375.jpg",
-    },
-    {
-      Title: "We make presenting easy",
-      Url: "https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US",
-      Description: "Take the stress out of preparing and presenting with our go-to decks.",
-      MediaUrl: "https://content-management-files.canva.com/9a698171-9e12-4751-9b65-79f87ac2a68b/presentations-en-500x375.jpg",
-    },
-  ]
-
-  const CarouselItems = carousels.map((carousel, index) => (
+  const CarouselItems = posts.map((post, index) => (
     <div key={index} className="flex flex-col gap-4 keen-slider__slide">
-      <a href={carousel.Url}>
+      <a href={post.slug}>
         <Image
-          width={500}
-          height={375}
-          src={carousel.MediaUrl}
+          width={post.featuredImage.node.mediaDetails.sizes[0].width}
+          height={post.featuredImage.node.mediaDetails.sizes[0].height}
+          src={post.featuredImage.node.mediaDetails.sizes[0].sourceUrl}
           alt="slider"
           className="rounded-lg w-full h-auto"
         />
       </a>
-      <h6 className="font-bold text-xs">{carousel.Title}</h6>
-      <p className="text-xs text-slate-500">{carousel.Description}</p>
+      <h6 className="font-bold text-xs">
+        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+      </h6>
+      <p className="text-xs text-slate-500" dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
+
     </div>
   ));
 
@@ -91,6 +67,8 @@ const Carousel = ({ setSelectedPage }: Props) => {
     mode: "free",
     slides: { origin: "center", perView: x, spacing: 20 },
   })
+
+
   return (
     <section
       id="blogs"
@@ -108,4 +86,4 @@ const Carousel = ({ setSelectedPage }: Props) => {
   )
 }
 
-export default Carousel
+export default Carousel;

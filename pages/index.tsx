@@ -5,7 +5,6 @@ import { SelectedPage } from "@/shared/types";
 import Navbar from "@/components/navbar";
 import Home from "@/components/home";
 import Features from "@/components/features";
-import Services from "@/components/services";
 import Templates from "@/components/masonry";
 import Carousel from "@/components/carousel";
 import Footer from "@/components/footer";

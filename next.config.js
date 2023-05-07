@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
-const path = require('path')
+const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains:["content-management-files.canva.com", "static.canva.com", "template.canva.com"],
+    domains: [
+      "blog.liilab.com",
+    ],
   },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
 };
 

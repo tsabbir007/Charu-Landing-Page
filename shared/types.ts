@@ -42,3 +42,37 @@ export interface FooterType {
         Url: string;
     }[];
 }
+
+
+
+export interface Post {
+    date: string;
+    slug: string;
+    title: string;
+    excerpt: string;
+    featuredImage: {
+      node: {
+        mediaDetails: {
+          file: string;
+          sizes: {
+            sourceUrl: string;
+            width: number;
+            height: number;
+          }[];
+        };
+      };
+    };
+    categories: {
+      nodes: {
+        name: string;
+        slug: string;
+      }[];
+    };
+  }
+  
+
+  
+
+  
+
+  
