@@ -57,7 +57,7 @@ export interface Post {
           sourceUrl: string;
           width: number;
           height: number;
-        };
+        }[];
       };
     };
   };

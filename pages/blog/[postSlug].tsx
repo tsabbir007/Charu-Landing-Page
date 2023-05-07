@@ -59,7 +59,7 @@ export async function getStaticProps({ params }: { params: { postSlug: string } 
   };
 }
 
-export default function Post({ postData }: { postData: PostProps }) {
+export default function Post({ postData }: { postData: any }) {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 

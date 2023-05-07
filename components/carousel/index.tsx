@@ -17,11 +17,11 @@ type Props = {
 
 
 const Carousel = ({ setSelectedPage}: Props) => {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<any>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res : Post[]= await getAllPosts();
+      const res = await getAllPosts();
       setPosts(res);
     };
     fetchPosts();
@@ -34,7 +34,7 @@ const Carousel = ({ setSelectedPage}: Props) => {
   if (isAboveSmallScreens) x = 3;
   if (isAboveMediumScreens) x = 5;
 
-  const CarouselItems = posts.map((post, index) => (
+  const CarouselItems = posts.map((post: any, index : number) => (
     <div key={index} className="flex flex-col gap-4 keen-slider__slide">
       <a href={`/blog/${post.slug}`}>
         <Image
