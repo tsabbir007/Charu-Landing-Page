@@ -1,17 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+
 html,
 #root,
-body{
+body {
   height: 100%;
   width: 100%;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
-a:hover{
+a:hover {
   color: #8b3dff;
+}
+
+/* Your own custom utilities */
+
+.has-text-align-left {
+  @apply text-left;
+}
+
+.has-text-align-center {
+  @apply text-center;
+}
+
+.has-text-align-right {
+  @apply text-right;
+}
+
+.has-large-font-size {
+  @apply text-4xl;
+}
+
+.alignfull {
+  @apply w-screen relative;
+
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  right: 50%;
+}
+
+.wp-block-image img {
+  @apply max-w-full mt-2;
+}
+.wp-block-image.aligncenter {
+  @apply text-center;
+}
+.wp-block-image.alignfull img,
+.wp-block-image.alignwide img {
+  @apply w-full;
+}
+.wp-block-image .alignleft,
+.wp-block-image .alignright,
+.wp-block-image .aligncenter,
+.wp-block-image.is-resized {
+  @apply table ml-0 mr-0;
+}
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image.is-resized > figcaption {
+  @apply table-caption;
+
+  caption-side: bottom;
+}
+
+.wp-block-image .alignleft {
+  @apply float-left mr-4;
+}
+.wp-block-image .alignright {
+  @apply float-right ml-4;
+}
+.wp-block-image .aligncenter {
+  @apply m-auto;
+}
+
+.wp-block-button a,
+.wp-block-file a.wp-block-file__button {
+  @apply bg-blue-500 text-white no-underline py-2 px-4;
+}
+
+.wp-block-button a:hover,
+.wp-block-file a.wp-block-file__button:hover {
+  @apply bg-blue-400 cursor-pointer;
+}
+
+.wp-block-file a:first-of-type {
+  @apply mr-4;
+}
+
+.wp-block-cover {
+  @apply flex flex-wrap justify-center items-center bg-cover bg-center overflow-hidden;
+
+  min-height: 430px;
+}
+
+.wp-block-verse {
+  @apply font-sans;
+}
+
+.wp-block-media-text {
+  @apply grid grid-cols-2 gap-4;
+}
+
+:where(.is-layout-flex) {
+  gap: 0.5em;
+}
+
+.is-layout-flow > .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+}
+
+.is-layout-flow > .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+}
+
+.is-layout-flow > .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.is-layout-constrained > .alignleft {
+  float: left;
+  margin-inline-start: 0;
+  margin-inline-end: 2em;
+}
+
+.is-layout-constrained > .alignright {
+  float: right;
+  margin-inline-start: 2em;
+  margin-inline-end: 0;
+}
+
+.is-layout-constrained > .aligncenter {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.is-layout-constrained
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.is-layout-flex {
+  display: flex;
+}
+
+.is-layout-flex {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.is-layout-flex > * {
+  margin: 0;
+}
+
+:where(.wp-block-columns.is-layout-flex) {
+  gap: 2em;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)) {
+  color: inherit;
+}
+
+:where(.wp-block-columns.is-layout-flex) {
+  gap: 2em;
+}
+
+.wp-block-pullquote {
+  font-size: 1.5em;
+  line-height: 1.6;
 }
