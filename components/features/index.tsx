@@ -70,7 +70,7 @@ const Features = ({ setSelectedPage }: Props) => {
                             {feature.Description}
                         </p>
                     </motion.div>
-                    <div className="mt-10">
+                    <div className="mt-8">
                         <ActionButton setSelectedPage={setSelectedPage}>
                             {feature.ButtonText}
                         </ActionButton>
@@ -85,8 +85,10 @@ const Features = ({ setSelectedPage }: Props) => {
             <motion.div className="flex flex-col gap-4 md:px-8 items-center pt-[7rem] md:pt-48"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
             >
+                <div className="text-center">
                 <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
                 <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
+                </div>
                 {featureItems}
             </motion.div>
         </section>
