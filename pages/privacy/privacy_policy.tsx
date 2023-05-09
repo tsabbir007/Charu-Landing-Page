@@ -27,18 +27,20 @@ const PrivacyPolicy = (props: Props) => {
     return (
         <section>
             <Navbar
-                isMainPage = {false}
+                isMainPage={false}
                 isTopOfPage={isTopOfPage}
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            <div className="container mt-32 mx-auto md:px-36 ms-8 md:ms-0">
-                <Breadcrumbs separator="›" aria-label="breadcrumb">
-                    <Link underline="hover" color="black" href="/">
-                        Home
-                    </Link>
-                    <Typography color="text.primary-500">Privacy Policy</Typography>
-                </Breadcrumbs>
+            <div className="container mt-32 mx-auto md:px-36">
+                <div className="ms-8 md:ms-0">
+                    <Breadcrumbs separator="›" aria-label="breadcrumb">
+                        <Link underline="hover" color="black" href="/">
+                            Home
+                        </Link>
+                        <Typography color="text.primary-500">Privacy Policy</Typography>
+                    </Breadcrumbs>
+                </div>
                 <div className="bg-gray-100 text-center rounded-lg py-28 mt-10">
                     <h1 className="font-bold font-sand text-3xl md:text-5xl">Privacy Policy</h1>
                 </div>

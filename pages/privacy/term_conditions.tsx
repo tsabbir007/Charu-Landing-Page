@@ -32,13 +32,15 @@ const TermConditions = (props: Props) => {
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
             />
-            <div className="container mt-32 mx-auto md:px-36 ms-8 md:ms-0">
-                <Breadcrumbs separator="›" aria-label="breadcrumb">
-                    <Link underline="hover" color="black" href="/">
-                        Home
-                    </Link>
-                    <Typography color="text.primary-500">Term & Conditions</Typography>
-                </Breadcrumbs>
+            <div className="container mt-32 mx-auto md:px-36">
+                <div className="ms-8 md:ms-0">
+                    <Breadcrumbs separator="›" aria-label="breadcrumb">
+                        <Link underline="hover" color="black" href="/">
+                            Home
+                        </Link>
+                        <Typography color="text.primary-500">Term & Conditions</Typography>
+                    </Breadcrumbs>
+                </div>
                 <div className="bg-gray-100 text-center rounded-lg py-28 mt-10">
                     <h1 className="font-bold font-sand text-3xl md:text-5xl">Term & Conditions</h1>
                 </div>

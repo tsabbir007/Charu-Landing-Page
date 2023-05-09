@@ -91,7 +91,7 @@ export default function Post({ postData }: { postData: any }) {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="container-fluid mt-36 md:my-32 mx-auto md:px-36 ms-8 md:ms-0 mb-3">
+      <div className="container-fluid mt-36 md:my-32 mx-auto md:px-36 ms-[16px] md:ms-0 mb-3">
         <Breadcrumbs separator="›" aria-label="breadcrumb">
           <Link underline="hover" color="black" href="/" className="text-normal text-lg">
             Blog
