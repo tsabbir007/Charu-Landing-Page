@@ -91,8 +91,8 @@ export default function Post({ postData }: { postData: any }) {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <div className="container-fluid mt-36 md:my-32 mx-auto md:px-36">
-        <Breadcrumbs separator="›" aria-label="breadcrumb" className="ms-8 md:ms-0 mb-3">
+      <div className="container-fluid mt-36 md:my-32 mx-auto md:px-36 ms-8 md:ms-0 mb-3">
+        <Breadcrumbs separator="›" aria-label="breadcrumb">
           <Link underline="hover" color="black" href="/" className="text-normal text-lg">
             Blog
           </Link>
@@ -102,9 +102,8 @@ export default function Post({ postData }: { postData: any }) {
       <div className={`${styles.top_banner}`}>
         <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:px-[12rem]`}>
           <div className="p-4">
-            <h1 className="text-4xl font-bold font-sand leading-snug">{postData.title}</h1>
-            {/* <p className="text-lg mt-5" dangerouslySetInnerHTML={{ __html: postData.excerpt }}></p> */}
-            <p className="text-xl mt-10">Learn how to use design thinking to solve your team’s most challenging problems.</p>
+            <h1 className="text-3xl md:text-4xl font-bold font-sand md:leading-snug">{postData.title}</h1>
+            <p className="text-xl mt-10" dangerouslySetInnerHTML={{ __html: trimExcerpt(postData.excerpt, 15) }}></p>
             <div className="my-10">
               <Link
                 className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
@@ -131,3 +130,14 @@ export default function Post({ postData }: { postData: any }) {
     </div>
   );
 }
+
+function trimExcerpt(excerpt: string, length: number) {
+  const words = excerpt.split(' ');
+  const trimmedWords = words.slice(0, length);
+  const trimmedExcerpt = trimmedWords.join(' ');
+  if (words.length > length) {
+    return trimmedExcerpt + ' ...';
+  }
+  return trimmedExcerpt;
+}
+
