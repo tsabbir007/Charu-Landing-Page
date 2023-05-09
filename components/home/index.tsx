@@ -14,6 +14,14 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void
 }
 
+const scrollToSection = (event: any, sectionId: string) => {
+    event.preventDefault();
+    const section = document.querySelector(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
 const Home = (props: Props) => {
     return (
         <div
@@ -28,6 +36,9 @@ const Home = (props: Props) => {
                         className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
                         style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem' }}
                         href="#features"
+                        onClick={(event) => {
+                            scrollToSection(event, '#features');
+                        }}
                     >
                         Get Started
                     </Link>
@@ -79,7 +90,7 @@ const Home = (props: Props) => {
                                 height={500}
                                 className='max-w-[180%] rounded'
                             >
-                            </Image> 
+                            </Image>
                         </div>
                     </div>
                 </div>
