@@ -61,21 +61,29 @@ const Navbar = ({ isMainPage, isTopOfPage, selectedPage, setSelectedPage }: Prop
                 page="Home"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
               />
               <AnchorLink
                 page="Features"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
               />
               <AnchorLink
                 page="Templates"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
               />
               <AnchorLink
                 page="Blogs"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
+                isMenuToggled={isMenuToggled}
+                setIsMenuToggled={setIsMenuToggled}
               />
             </div>
           )}
@@ -103,21 +111,29 @@ const Navbar = ({ isMainPage, isTopOfPage, selectedPage, setSelectedPage }: Prop
               page="Home"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              isMenuToggled={isMenuToggled}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <AnchorLink
               page="Features"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              isMenuToggled={isMenuToggled}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <AnchorLink
               page="Templates"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              isMenuToggled={isMenuToggled}
+              setIsMenuToggled={setIsMenuToggled}
             />
             <AnchorLink
               page="Blogs"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
+              isMenuToggled={isMenuToggled}
+              setIsMenuToggled={setIsMenuToggled}
             />
           </div>
         </div>

@@ -4,17 +4,32 @@ import { SelectedPage } from "@/shared/types";
 
 type Props = {
   page: string;
-  selectedPage : SelectedPage;
+  selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
+  isMenuToggled: boolean;
+  setIsMenuToggled: (value: boolean) => void;
 };
 
-const AnchorLink = ({ page, selectedPage, setSelectedPage }: Props) => {
-  const loweCasePage = page.toLowerCase().replace(/ /g, "-") as SelectedPage;
+const AnchorLink = ({ page, selectedPage, setSelectedPage, isMenuToggled, setIsMenuToggled }: Props) => {
+  const scrollToSection = (event: any, sectionId: string) => {
+    event.preventDefault();
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const lowerCasePage = page.toLowerCase().replace(/ /g, "-") as SelectedPage;
   return (
     <Link
-    className={`${selectedPage === loweCasePage ? "text-primary-100" : "text-black-500"} text-sm font-normal transition duration-300 ease-in-out hover:text-primary-100`}
-    href={`#${loweCasePage}`}
-    onClick={() => setSelectedPage(loweCasePage)}
+      className={`${selectedPage === lowerCasePage ? "text-primary-100" : "text-black-500"} text-sm font-normal transition duration-300 ease-in-out hover:text-primary-100`}
+      href={`#${lowerCasePage}`}
+      onClick={(event) => {
+        setSelectedPage(lowerCasePage);
+        setIsMenuToggled(!isMenuToggled);
+        scrollToSection(event, `#${lowerCasePage}`);
+      }}
+
     >
       {page}
     </Link>

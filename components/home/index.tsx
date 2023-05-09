@@ -19,7 +19,7 @@ const Home = (props: Props) => {
         <div
             id="home"
         >
-            <div className="flex flex-col justify-center items-center pt-[135px] text-center px-5 mb-10">
+            <div className="flex flex-col justify-center items-center pt-[120px] md:pt-[135px] text-center px-5 mb-16">
                 <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-5'>Unleashing Creativity: What is Your Next Masterpiece?</h1>
                 <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}
@@ -35,7 +35,7 @@ const Home = (props: Props) => {
                 <div className='relative mt-5 md:mt-10'>
                     {/* mt-24 md:mt-60 */}
                     <div className='relative md:max-w-[50%] mx-auto'>
-                        <video src={"/promo-video.mp4"} autoPlay loop muted className='ms-7 mt-8'></video>
+                        <video src={"/promo-video.mp4"} autoPlay loop muted className='ms-3 mt-8'></video>
                     </div>
                     <div className={`${styles.relativeImages} hidden md:block`}>
                         <div className='left-[10%] top-[-14%]'>

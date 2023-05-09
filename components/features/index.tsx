@@ -82,7 +82,7 @@ const Features = ({ setSelectedPage }: Props) => {
 
     return (
         <section id="features">
-            <motion.div className="flex flex-col gap-4 md:px-8 items-center pt-52"
+            <motion.div className="flex flex-col gap-4 md:px-8 items-center pt-[7rem] md:pt-48"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
             >
                 <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>

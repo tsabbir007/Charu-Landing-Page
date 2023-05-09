@@ -108,8 +108,8 @@ export default function Post({ postData }: { postData: any }) {
             <div className="my-10">
               <Link
                 className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
-                style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontWeight: 900, fontSize: '1.2rem' }}
-                href="#features"
+                style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontWeight: 900, fontSize: '1.2rem' ,textDecoration: 'none'}}
+                href="https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US"
               >
                 Start your free trial
               </Link>

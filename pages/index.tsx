@@ -36,7 +36,7 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       {/* container */}
-      <div className="container mx-auto px-5 md:px-36">
+      <div className="container-fluid mx-auto px-5 md:px-36">
         <Home setSelectedPage={setSelectedPage} />
         <Features setSelectedPage={setSelectedPage} />
         {/* <Services setSelectedPage={setSelectedPage} /> */}

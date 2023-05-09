@@ -119,7 +119,7 @@ const SSRMasonry = ({ setSelectedPage }: Props) => {
 
     return (
         <section id="templates">
-            <motion.div className="flex flex-col justify-center pt-48 text-center"
+            <motion.div className="flex flex-col justify-center pt-[7rem] md:pt-48 text-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Templates)}
             >
                 <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Discover our incredible selection of templates</h1>

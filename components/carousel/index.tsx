@@ -4,9 +4,10 @@ import { SelectedPage, Post } from "@/shared/types";
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
+
 
 
 
@@ -16,7 +17,7 @@ type Props = {
 
 
 
-const Carousel = ({ setSelectedPage}: Props) => {
+const Carousel = ({ setSelectedPage }: Props) => {
   const [posts, setPosts] = useState<any>([]);
 
   useEffect(() => {
@@ -34,7 +35,33 @@ const Carousel = ({ setSelectedPage}: Props) => {
   if (isAboveSmallScreens) x = 3;
   if (isAboveMediumScreens) x = 5;
 
-  const CarouselItems = posts.map((post: any, index : number) => (
+  const sliderOptions: {
+    loop: boolean;
+    mode: "free";
+    slides: {
+      origin: "center";
+      perView: number;
+      spacing: number;
+    };
+  } = {
+    loop: true,
+    mode: "free",
+    slides: { origin: "center", perView: x, spacing: 20 },
+  };
+
+  const internalSliderRef = useRef(null);
+
+  const [ref, internalSlider] = useKeenSlider<HTMLDivElement>(sliderOptions);
+
+  useEffect(() => {
+
+    internalSlider.current?.update({
+      ...sliderOptions
+    });
+  }, [internalSlider, sliderOptions]);
+
+
+  const CarouselItems = posts.map((post: any, index: number) => (
     <div key={index} className="flex flex-col gap-4 keen-slider__slide">
       <a href={`/blog/${post.slug}`}>
         <Image
@@ -45,27 +72,19 @@ const Carousel = ({ setSelectedPage}: Props) => {
           className="rounded-lg w-full h-auto"
         />
       </a>
-      <h6 className="font-bold text-xs">
+      <h6 className="font-bold text-[1rem]">
         <Link href={`/blog/${post.slug}`}>{post.title}</Link>
       </h6>
-      <p className="text-xs text-slate-500" dangerouslySetInnerHTML={{ __html: post.excerpt }}></p>
-
+      <p className="text-sm text-slate-500" dangerouslySetInnerHTML={{ __html: trimExcerpt(post.excerpt, 15) }}></p>
     </div>
   ));
-
-
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: "free",
-    slides: { origin: "center", perView: x, spacing: 20 },
-  })
 
 
   return (
     <section
       id="blogs"
     >
-      <motion.div className="flex flex-col justify-center items-center text-center pt-48"
+      <motion.div className="flex flex-col justify-center items-center text-center pt-[7rem] md:pt-48"
         onViewportEnter={() => setSelectedPage(SelectedPage.Blogs)}
       >
         <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Discover Our Latest Blogs</h1>
@@ -79,3 +98,15 @@ const Carousel = ({ setSelectedPage}: Props) => {
 }
 
 export default Carousel;
+
+
+
+function trimExcerpt(excerpt: string, length: number) {
+  const words = excerpt.split(' ');
+  const trimmedWords = words.slice(0, length);
+  const trimmedExcerpt = trimmedWords.join(' ');
+  if (words.length > length) {
+    return trimmedExcerpt + ' ...';
+  }
+  return trimmedExcerpt;
+}

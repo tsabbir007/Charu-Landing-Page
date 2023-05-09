@@ -173,36 +173,6 @@ const Footer = (props: Props) => {
         {
             Title: 'Company',
             Items: [
-                // {
-                //     Name: "About",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
-                // {
-                //     Name: "Newsroom",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
-                // {
-                //     Name: "Careers",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
-                // {
-                //     Name: "Sustainability",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
-                // {
-                //     Name: "Trust Center",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
-                // {
-                //     Name: "Security",
-                //     IsUpcomming: false,
-                //     Url: "",
-                // },
                 {
                     Name: "About us",
                     IsUpcomming: false,
@@ -230,7 +200,7 @@ const Footer = (props: Props) => {
     return (
         <section id='footer'>
             <div className='border-b border-gray-500'></div>
-            <div className='content-center grid-1 grid gap-8 sm:grid-cols-2 md:grid-cols-4 px-10 pt-16'>
+            <div className='content-center grid-1 grid gap-8 sm:grid-cols-2 md:grid-cols-4 px-10 pt-10'>
                 {footerElements.map((footerElement, index) => (
                     <div
                         key={index}
