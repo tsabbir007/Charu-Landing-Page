@@ -131,7 +131,7 @@ const SSRMasonry = ({ setSelectedPage }: Props) => {
                                 <a href={item.Url}>
                                     <Image
                                         src={item.MediaUrl}
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        sizes="(max-width: 639px) 50vw, 25vw"
                                         alt={item.Title}
                                         loading="lazy"
                                         style={{
