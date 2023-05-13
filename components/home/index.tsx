@@ -51,10 +51,9 @@ const Home = (props: Props) => {
                     <div className={`${styles.relativeImages} hidden md:block`}>
                         <div className='left-[10%] top-[-14%]'>
                             <Image
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 src={Img1}
                                 alt="Picture of the author"
-                                width={500}
-                                height={500}
                                 className='max-w-[120%] rounded'
                             >
 
@@ -64,8 +63,7 @@ const Home = (props: Props) => {
                             <Image
                                 src={Img2}
                                 alt="Picture of the author"
-                                width={500}
-                                height={500}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className='max-w-[180%] rounded'
                             >
 
@@ -75,8 +73,7 @@ const Home = (props: Props) => {
                             <Image
                                 src={Img3}
                                 alt="Picture of the author"
-                                width={500}
-                                height={500}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className='max-w-[180%] rounded'
                             >
 
@@ -86,8 +83,7 @@ const Home = (props: Props) => {
                             <Image
                                 src={Img4}
                                 alt="Picture of the author"
-                                width={500}
-                                height={500}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className='max-w-[180%] rounded'
                             >
                             </Image>

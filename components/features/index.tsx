@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
 import Image from 'next/image'
 import Img1 from './images/feature1.jpg'
-import Img2 from './images/feature2.jpg'
 import Img3 from './images/feature3.jpg'
 //import viewport
 
@@ -22,8 +21,8 @@ const features: Array<FeatureType> = [
         ButtonText: "Start designing",
     },
     {
-        IsVideoUrl: false,
-        MediaUrl: Img2,
+        IsVideoUrl: true,
+        MediaUrl: "/feature-vdo.mp4",
         Title: "Designed to foster collaboration",
         Description: "Encourage collaboration by inviting others to join you in editing or empower your entire team to oversee brand assets, engage in interactive brainstorming sessions on digital whiteboards, streamline approval processes, and enhance content production efficiency using tools such as document collaboration.",
         ButtonText: "Learn more",
