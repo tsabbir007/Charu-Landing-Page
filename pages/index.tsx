@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="app">
       <Navbar
-        isMainPage = {true}
+        isMainPage={true}
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
@@ -40,11 +40,11 @@ function App() {
         <Home setSelectedPage={setSelectedPage} />
         <Features setSelectedPage={setSelectedPage} />
         {/* <Services setSelectedPage={setSelectedPage} /> */}
-        <Templates setSelectedPage={setSelectedPage}/>
+        <Templates setSelectedPage={setSelectedPage} />
       </div>
       <div className="px-6">
         <Carousel setSelectedPage={setSelectedPage} />
-        <Footer  setSelectedPage={setSelectedPage}/>
+        <Footer setSelectedPage={setSelectedPage} />
       </div>
     </div>
   );

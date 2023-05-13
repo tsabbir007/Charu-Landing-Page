@@ -2,7 +2,7 @@ import HText from "@/shared/HText";
 import ActionButton from '@/shared/ActionButton'
 import { motion } from "framer-motion";
 import { FeatureType, SelectedPage } from "@/shared/types";
-import Image from "next/image";
+import Image from 'next/image'
 import Img1 from './images/feature1.jpg'
 import Img2 from './images/feature2.jpg'
 import Img3 from './images/feature3.jpg'
@@ -46,13 +46,14 @@ const Features = ({ setSelectedPage }: Props) => {
         >
             <div className={"mt-16 md:mt-24 items-center justify-between gap-20 md:flex " + (index % 2 && "md:flex-row-reverse")}>
                 {feature.IsVideoUrl ? (<video src={feature.MediaUrl} autoPlay loop muted className="md:w-1/2 mt-8"></video>) : (
+
                     <Image
-                        width={500}
-                        height={500}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         src={feature.MediaUrl}
                         alt="feature image"
-                        className="md:w-1/2 md:mt-8 rounded"
+                        className="md:w-1/2 md:mt-8 rounded h-auto max-w-full"
                     />
+
                 )}
                 <div className="md:ps-10">
                     <HText>{feature.Title}</HText>
@@ -86,8 +87,8 @@ const Features = ({ setSelectedPage }: Props) => {
                 onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
             >
                 <div className="text-center">
-                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
-                <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
+                    <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
+                    <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
                 </div>
                 {featureItems}
             </motion.div>
