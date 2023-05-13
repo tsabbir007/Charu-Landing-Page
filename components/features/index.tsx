@@ -71,7 +71,7 @@ const Features = ({ setSelectedPage }: Props) => {
                         </p>
                     </motion.div>
                     <div className="mt-8">
-                        <ActionButton setSelectedPage={setSelectedPage}>
+                        <ActionButton setSelectedPage={setSelectedPage} ariaLabel={feature.Title}>
                             {feature.ButtonText}
                         </ActionButton>
                     </div>

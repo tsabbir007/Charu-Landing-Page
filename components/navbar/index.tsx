@@ -91,7 +91,7 @@ const Navbar = ({ isMainPage, isTopOfPage, selectedPage, setSelectedPage }: Prop
           )}
           {/* login/signup button */}
           <div className={`${flexBetween} gap-4`}>
-            <ActionButton setSelectedPage={setSelectedPage}>
+            <ActionButton setSelectedPage={setSelectedPage} ariaLabel="Download Free">
               Download Free
             </ActionButton>
           </div>

@@ -40,7 +40,8 @@ const Service = (props: Props) => {
                 <h1 className='text-2xl font-bold text-gray-800'>{service.Title}</h1>
             </div>
             <p className='text-gray-600 text-sm my-2'>{service.Description}</p>
-            <ActionButton setSelectedPage={props.setSelectedPage}>{service.ButtonText}</ActionButton>
+            <ActionButton setSelectedPage={props.setSelectedPage} ariaLabel={service.ButtonText}
+            >{service.ButtonText}</ActionButton>
         </div>
 
     ));

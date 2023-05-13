@@ -1,6 +1,4 @@
 import { SelectedPage } from '@/shared/types'
-import useMediaQuery from '@/hooks/useMediaQuery'
-import ActionButton from '@/shared/ActionButton'
 import Image from 'next/image'
 import styles from './home.module.scss'
 import Img1 from './images/charu-1.jpg'
