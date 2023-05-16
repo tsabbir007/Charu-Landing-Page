@@ -17,7 +17,7 @@ interface Post {
 }
 
 export default async function graphqlRequest(query: any) {
-  const url = "https://blog.tubeforces.com/graphql";
+  const url = "https://blog.charu.app/graphql";
   const headers = { "Content-Type": "application/json" };
 
   const res = await fetch(url, {

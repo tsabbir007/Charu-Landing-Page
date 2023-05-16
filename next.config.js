@@ -4,7 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
-      "blog.tubeforces.com",
+      "blog.charu.app",
     ],
   },
   sassOptions: {
