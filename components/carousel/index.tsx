@@ -35,20 +35,6 @@ const Carousel = ({ setSelectedPage }: Props) => {
   if (isAboveSmallScreens) x = 3;
   if (isAboveMediumScreens) x = 5;
 
-  // const sliderOptions : {
-  //   loop: boolean;
-  //   mode: "free";
-  //   slides: {
-  //     origin: "center";
-  //     perView: number;
-  //     spacing: number;
-  //   };
-  // } = {
-  //   loop: true,
-  //   mode: "free",
-  //   slides: { origin: "center", perView: x, spacing: 20 },
-  // };
-
   const sliderOptions: {
     loop: boolean;
     mode: "free";
