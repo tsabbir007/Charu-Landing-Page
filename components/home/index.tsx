@@ -5,8 +5,8 @@ import Img1 from './images/charu-1.jpg'
 import Img2 from './images/charu2.jpg'
 import Img3 from './images/charu3.jpg'
 import Img4 from './images/charu4.jpg'
-// import Promo from './videos/promo.mp4'
 import Link from 'next/link'
+import Head from 'next/head'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -25,6 +25,9 @@ const Home = (props: Props) => {
         <div
             id="home"
         >
+            <Head>
+                <title>Charu - The Best Free Graphics Design Photo Editor App</title>
+            </Head>
             <div className="flex flex-col justify-center items-center pt-[120px] md:pt-[135px] text-center px-5 mb-16">
                 <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-5'>Unleashing Creativity: What is Your Next Masterpiece?</h1>
                 <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>

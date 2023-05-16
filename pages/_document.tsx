@@ -21,7 +21,6 @@ class MyDocument extends Document {
 
         return (
             <Html lang="en">
-                <title>Charu - The Best Free Graphics Design Photo Editor App</title>
                 <Head>
                     <link rel="icon" href="/charu.ico" />
                     <meta charSet="utf-8"></meta>
