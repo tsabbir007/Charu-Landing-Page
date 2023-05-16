@@ -3,8 +3,8 @@ import { getPostSlugs, getSinglePost } from "@/lib/posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { SelectedPage } from "@/shared/types";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from 'react'
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 import Image from "next/image";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import styles from "./post.module.scss";
@@ -68,7 +68,10 @@ export default function Post({ postData }: { postData: any }) {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
+  const [showChild, setShowChild] = useState(false)
+
   useEffect(() => {
+    setShowChild(true)
     const handleScroll = () => {
       if (window.scrollY === 0) {
         setIsTopOfPage(true);
@@ -79,7 +82,14 @@ export default function Post({ postData }: { postData: any }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (!showChild) {
+    return null
+  }
+
   return (
+
+
     <div className={`${styles.single_post} font-sand`}>
       <Head>
         <title key={postData.slug}>{postData.title}</title>
@@ -103,15 +113,15 @@ export default function Post({ postData }: { postData: any }) {
         <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 md:px-[12rem]`}>
           <div className="p-4">
             <h1 className="text-3xl md:text-4xl font-bold font-sand md:leading-snug">{postData.title}</h1>
-            <p className="text-xl mt-10" dangerouslySetInnerHTML={{ __html: trimExcerpt(postData.excerpt, 15) }}></p>
+            {/* <p className="text-xl mt-10" dangerouslySetInnerHTML={{ __html: trimExcerpt(postData.excerpt, 15) }}></p> */}
             <div className="my-10">
               <Link
-              aria-label="Download on Google Play"
+                aria-label="Download on Google Play"
                 className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
-                style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontWeight: 900, fontSize: '1.2rem' ,textDecoration: 'none'}}
+                style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontWeight: 900, fontSize: '1.2rem', textDecoration: 'none' }}
                 href="https://play.google.com/store/apps/details?id=app.charu.graphic_design_photo_editor&hl=en&gl=US"
               >
-                Start your free trial
+                Start your free Design
               </Link>
             </div>
           </div>
@@ -130,6 +140,8 @@ export default function Post({ postData }: { postData: any }) {
       <Footer setSelectedPage={setSelectedPage} />
     </div>
   );
+
+  
 }
 
 function trimExcerpt(excerpt: string, length: number) {
