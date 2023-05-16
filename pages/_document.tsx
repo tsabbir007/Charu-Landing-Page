@@ -21,11 +21,11 @@ class MyDocument extends Document {
 
         return (
             <Html lang="en">
+                <title>Charu - The Best Free Graphics Design Photo Editor App</title>
                 <Head>
                     <link rel="icon" href="/charu.ico" />
                     <meta charSet="utf-8"></meta>
                     <meta name='viewport' content='width=device-width, initial-scale=1' />
-                    <title>Charu - The Best Free Graphics Design Photo Editor App</title>
                     <meta name="title" content="Charu - The Best Free Graphics Design Photo Editor App"></meta>
                     <meta name="description" content="Charu is the best free graphics design photo editor app for Android. With Charu, you can create stunning photos and graphics with ease. Whether you're a beginner or a professional, Charu has everything you need to create amazing images."></meta>
                     <meta name="keywords" content="charu, free graphics design photo editor app, Android app, photo editor, graphics design"></meta>
