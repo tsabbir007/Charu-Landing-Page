@@ -4,15 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 }
-
 
 html,
 #root,
@@ -114,6 +110,9 @@ a:hover {
 
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
+  background-color: #f8f9f9;
+  padding: 48px;
+  border-radius: 4px;
 }
 
 :where(.is-layout-flex) {
