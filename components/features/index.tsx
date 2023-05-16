@@ -23,8 +23,8 @@ const features: Array<FeatureType> = [
     {
         IsVideoUrl: true,
         MediaUrl: "/feature-vdo.mp4",
-        Title: "Designed to foster collaboration",
-        Description: "Encourage collaboration by inviting others to join you in editing or empower your entire team to oversee brand assets, engage in interactive brainstorming sessions on digital whiteboards, streamline approval processes, and enhance content production efficiency using tools such as document collaboration.",
+        Title: "Unlock Your Creativity with Editable Templates!",
+        Description: "Discover the power of editable templates and bring your creative visions to life effortlessly. With editable templates, you can easily customize pre-designed layouts, graphics, and elements to suit your unique style. No design skills? No problem! These templates make it simple for anyone to create stunning visuals in no time. Whether you need a captivating social media post, a professional presentation slide, or a striking website banner, editable templates have got you covered. Save time and effort with ready-to-use designs that you can personalize with your own text, images, and colors. Embrace the flexibility and convenience of editable templates and watch your designs shine.",
         ButtonText: "Learn more",
     },
     {
