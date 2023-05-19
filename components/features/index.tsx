@@ -25,14 +25,14 @@ const features: Array<FeatureType> = [
         MediaUrl: "/feature-vdo.mp4",
         Title: "Unlock Your Creativity with Editable Templates!",
         Description: "Discover the power of editable templates and bring your creative visions to life effortlessly. With editable templates, you can easily customize pre-designed layouts, graphics, and elements to suit your unique style. No design skills? No problem! These templates make it simple for anyone to create stunning visuals in no time. Whether you need a captivating social media post, a professional presentation slide, or a striking website banner, editable templates have got you covered. Save time and effort with ready-to-use designs that you can personalize with your own text, images, and colors. Embrace the flexibility and convenience of editable templates and watch your designs shine.",
-        ButtonText: "Learn more",
+        ButtonText: "Create now",
     },
     {
         IsVideoUrl: false,
         MediaUrl: Img3,
-        Title: "Too amazing to keep to myself",
-        Description: "No matter if you're designing a brochure or creating a social media campaign, showcase your artistic talents in the physical realm. Seamlessly publish, download, or distribute your creations with ease using Charu",
-        ButtonText: "Create your own destiny",
+        Title: "Discover Your Style with Charu",
+        Description: "Charu's stylish templates enhance your resume with a touch of personal flair. Stand out from the crowd and showcase your unique personality with our visually appealing designs, making a memorable impression.",
+        ButtonText: "Create your style now",
     }
 ]
 
