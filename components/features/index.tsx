@@ -66,7 +66,7 @@ const Features = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >
-                        <p className="my-2 md:my-5 text-lg">
+                        <p className="my-2 md:my-5 text-lg text-gray-600">
                             {feature.Description}
                         </p>
                     </motion.div>
