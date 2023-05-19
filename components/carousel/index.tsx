@@ -4,7 +4,7 @@ import { SelectedPage, Post } from "@/shared/types";
 import useMediaQuery from '@/hooks/useMediaQuery'
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useRef, useState, useEffect,  useMemo } from "react";
+import { useRef, useState, useEffect, useMemo } from "react";
 import { getAllPosts } from "@/lib/posts";
 import Link from "next/link";
 
@@ -43,15 +43,11 @@ const Carousel = ({ setSelectedPage }: Props) => {
       perView: number;
       spacing: number;
     };
-  } = useMemo(() => {
-    return {
-      loop: true,
-      mode: "free",
-      slides: { origin: "center", perView: x, spacing: 20 },
-    };
-  }, [x]);
-  
-  
+  } = {
+    loop: true,
+    mode: "free",
+    slides: { origin: "center", perView: x, spacing: 20 },
+  };
 
   const internalSliderRef = useRef(null);
 
