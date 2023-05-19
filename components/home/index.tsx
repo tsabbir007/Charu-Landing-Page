@@ -28,14 +28,14 @@ const Home = (props: Props) => {
             <Head>
                 <title>Charu - The Best Free Graphics Design Photo Editor App</title>
             </Head>
-            <div className="flex flex-col justify-center items-center pt-[120px] md:pt-[135px] text-center px-5 mb-16">
-                <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-5'>Unleashing Creativity: What is Your Next Masterpiece?</h1>
-                <p className='text-gray-600 text-md md:text-2xl mt-4'>Charu makes it easy to create and share professional designs.</p>
+            <div className="flex flex-col justify-center items-center pt-[120px] md:pt-[135px] text-center md:px-5 mb-16">
+                <h1 className='text-4xl md:text-6xl font-bold text-gray-800 font-sand mb-5'>What stunning design will you create today?</h1>
+                <p className='text-gray-600 text-lg md:text-3xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}
                 <div className="flex flex-col gap-4 mt-5">
                     <Link
                         className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
-                        style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem' }}
+                        style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontSize: '1.2rem' }}
                         href="#features"
                         onClick={(event) => {
                             scrollToSection(event, '#features');

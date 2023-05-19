@@ -66,7 +66,7 @@ const Features = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >
-                        <p className="my-2">
+                        <p className="my-2 md:my-5 text-lg">
                             {feature.Description}
                         </p>
                     </motion.div>
@@ -86,8 +86,8 @@ const Features = ({ setSelectedPage }: Props) => {
                 onViewportEnter={() => setSelectedPage(SelectedPage.Features)}
             >
                 <div className="text-center">
-                    <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
-                    <p className='text-gray-600 text-lg mt-1'>Discover the hidden gems that define our exceptional qualities.</p>
+                    <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
+                    <p className='text-gray-600 text-lg mt-1 md:mt-10 md:text-xl'>Discover the hidden gems that define our exceptional qualities.</p>
                 </div>
                 {featureItems}
             </motion.div>

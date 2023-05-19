@@ -22,7 +22,7 @@ const AnchorLink = ({ page, selectedPage, setSelectedPage, isMenuToggled, setIsM
   const lowerCasePage = page.toLowerCase().replace(/ /g, "-") as SelectedPage;
   return (
     <Link
-      className={`${selectedPage === lowerCasePage ? "text-primary-100" : "text-black-500"} text-sm font-normal transition duration-300 ease-in-out hover:text-primary-100`}
+      className={`${selectedPage === lowerCasePage ? "text-primary-100" : "text-black-500"} font-normal transition duration-300 ease-in-out hover:text-primary-100`}
       href={`#${lowerCasePage}`}
       onClick={(event) => {
         setSelectedPage(lowerCasePage);

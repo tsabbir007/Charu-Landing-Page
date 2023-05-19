@@ -122,8 +122,8 @@ const SSRMasonry = ({ setSelectedPage }: Props) => {
             <motion.div className="flex flex-col justify-center pt-[7rem] md:pt-48 text-center"
                 onViewportEnter={() => setSelectedPage(SelectedPage.Templates)}
             >
-                <h1 className='text-3xl font-bold text-gray-800 font-sand mb-2'>Discover our incredible selection of templates</h1>
-                <p className='text-gray-600 text-lg mt-1 mb-20'>Find the perfect templates to enhance your creativity and productivity</p>
+                <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-2'>Discover our incredible selection of templates</h1>
+                <p className='text-gray-600 text-lg md:text-xl mt-1 md:mt-10 mb-20'>Find the perfect templates to enhance your creativity and productivity</p>
                 <Box sx={{}}>
                     <Masonry columns={x} spacing={2}>
                         {masonry.map((item, index) => (
