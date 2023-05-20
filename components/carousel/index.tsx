@@ -88,7 +88,7 @@ const Carousel = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Blogs)}
       >
         <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-2'>Discover Our Latest Blogs</h1>
-        <p className='text-gray-600 text-lg md:text-xl mt-1 md:mt-10 mb-5'>Uncover captivating insights and fresh perspectives in our latest blog post, guaranteed to inform and inspire.</p>
+        <p className='text-gray-600 text-base md:text-xl mt-1 md:mt-10 mb-5'>Uncover captivating insights and fresh perspectives in our latest blog post, guaranteed to inform and inspire.</p>
         <div ref={ref} className="keen-slider mt-10 pb-52">
           {CarouselItems}
         </div>

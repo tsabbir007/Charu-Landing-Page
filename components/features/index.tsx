@@ -54,7 +54,7 @@ const Features = ({ setSelectedPage }: Props) => {
                     />
 
                 )}
-                <div className="md:ps-10">
+                <div className="mt-10 md:mt-0 md:ps-10">
                     <HText>{feature.Title}</HText>
                     <motion.div
                         initial="hidden"
@@ -66,7 +66,7 @@ const Features = ({ setSelectedPage }: Props) => {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >
-                        <p className="my-2 md:my-5 text-lg text-gray-600">
+                        <p className="my-5 text-lg text-gray-600">
                             {feature.Description}
                         </p>
                     </motion.div>
@@ -87,7 +87,7 @@ const Features = ({ setSelectedPage }: Props) => {
             >
                 <div className="text-center">
                     <h1 className='text-3xl md:text-5xl font-bold text-gray-800 font-sand mb-2'>Explore our modern mobile App</h1>
-                    <p className='text-gray-600 text-lg mt-1 md:mt-10 md:text-xl'>Discover the hidden gems that define our exceptional qualities.</p>
+                    <p className='text-gray-600 text-base mt-3 md:mt-10 md:text-xl'>Discover the hidden gems that define our exceptional qualities.</p>
                 </div>
                 {featureItems}
             </motion.div>

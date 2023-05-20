@@ -58,13 +58,13 @@ const Home = (props: Props) => {
                 <script key="structured-data" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(charuOrganization) }} />
             </Head>
             <div className="flex flex-col justify-center items-center pt-[120px] md:pt-[135px] text-center md:px-5 mb-16">
-                <h1 className='text-4xl md:text-6xl font-bold text-gray-800 font-sand mb-5'>What stunning design will you create today?</h1>
-                <p className='text-gray-600 text-lg md:text-3xl mt-4'>Charu makes it easy to create and share professional designs.</p>
+                <h1 className='text-3xl md:text-6xl font-bold text-gray-800 font-sand mb-5'>What stunning design will you create today?</h1>
+                <p className='text-gray-600 md:text-3xl mt-4'>Charu makes it easy to create and share professional designs.</p>
                 { /* margin top 4 */}
                 <div className="flex flex-col gap-4 mt-5">
                     <Link
                         className='rounded bg-primary-100 text-white py-2 px-4 focus:outline-none focus:shadow-outline'
-                        style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontSize: '1.2rem' }}
+                        style={{ backgroundColor: '#8b3dff', color: '#fff', borderRadius: '4px', padding: '0.5rem 1rem', fontSize: '1rem' }}
                         href="#features"
                         onClick={(event) => {
                             scrollToSection(event, '#features');
@@ -73,7 +73,7 @@ const Home = (props: Props) => {
                         Get Started
                     </Link>
                 </div>
-                <div className='relative mt-5 md:mt-10'>
+                <div className='relative mt-5 md:mt-16'>
                     {/* mt-24 md:mt-60 */}
                     <div className='relative md:max-w-[50%] mx-auto'>
                         <video src={"/promo-video.mp4"} autoPlay loop muted className='ms-3 mt-8'></video>
