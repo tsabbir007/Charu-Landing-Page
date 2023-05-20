@@ -16,6 +16,22 @@ interface Post {
   };
 }
 
+interface yoastSeo {
+  metaDesc: string;
+  title: string;
+  schema: {
+    raw: string;
+  };
+  opengraphTitle: string;
+  opengraphDescription: string;
+  opengraphUrl: string;
+  opengraphImage: {
+    mediaItemUrl: string;
+  };
+  opengraphType: string;
+}
+
+
 export default async function graphqlRequest(query: any) {
   const url = "https://blog.charu.app/graphql";
   const headers = { "Content-Type": "application/json" };
@@ -101,6 +117,37 @@ export async function getSinglePost(slug: string): Promise<Post> {
   const singlePost: Post = resJson.data.post;
 
   return singlePost;
+}
+
+export async function getYoastSeo(pageType:string = 'post', slug: string = '/'): Promise<any> {
+  const query = {
+    query: `query getSeo {
+      ${pageType}(
+        id: "${slug}"
+        idType: SLUG
+      ) {
+        seo {
+          metaDesc
+          title
+          schema {
+            raw
+          }
+          opengraphTitle
+          opengraphDescription
+          opengraphUrl
+          opengraphImage {
+            mediaItemUrl
+          }
+          opengraphType
+        }
+      }
+    } `,
+  };
+
+  const resJson = await graphqlRequest(query);
+  const yoastSeo: yoastSeo = resJson.data.post.seo;
+
+  return yoastSeo;
 }
 
 export async function getPostSlugs(): Promise<{ slug: string }[]> {

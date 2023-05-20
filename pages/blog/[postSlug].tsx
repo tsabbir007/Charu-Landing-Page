@@ -1,10 +1,9 @@
 import Head from "next/head";
-import { getPostSlugs, getSinglePost } from "@/lib/posts";
+import { getPostSlugs, getSinglePost, getYoastSeo } from "@/lib/posts";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { SelectedPage } from "@/shared/types";
 import { useEffect, useState } from 'react'
-import { Breakpoint, BreakpointProvider } from 'react-socks';
 import Image from "next/image";
 import { Breadcrumbs, Link, Typography } from "@mui/material";
 import styles from "./post.module.scss";
@@ -49,6 +48,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { postSlug: string } }) {
   const postData = await getSinglePost(params.postSlug);
+  const yoastSeo = await getYoastSeo('post', params.postSlug);
 
   if (!postData) {
     return {
@@ -59,12 +59,13 @@ export async function getStaticProps({ params }: { params: { postSlug: string } 
   return {
     props: {
       postData,
+      yoastSeo
     },
     notFound: false,
   };
 }
 
-export default function Post({ postData }: { postData: any }) {
+export default function Post({ postData, yoastSeo }: { postData: any, yoastSeo: any }) {
   const [selectedPage, setSelectedPage] = useState(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
@@ -87,13 +88,24 @@ export default function Post({ postData }: { postData: any }) {
     return null
   }
 
+  let ogUrl = yoastSeo.opengraphUrl.replace('https://blog.charu.app', 'http://localhost:3000/blog')
+
+
   return (
-
-
     <div className={`${styles.single_post} font-sand`}>
       <Head>
-        <title key={postData.slug}>{postData.title}</title>
-        <meta name="description" content={postData.excerpt} key="metadescription" />
+        <title key="title" >{postData.title}</title>
+        <meta name="description" content={yoastSeo.metaDesc} key="metadescription" />
+        {/* open graph */}
+        <meta property="og:title" content={yoastSeo.opengraphTitle} key="ogtitle" />
+        <meta property="og:description" content={yoastSeo.opengraphDescription} key="ogdescription" />
+        <meta property="og:url " content={ogUrl} key="ogurl" />
+        <meta property="og:image" content={yoastSeo.opengraphImage.mediaItemUrl} key="ogimage" />
+        <meta property="og:type" content={yoastSeo.opengraphType} key="ogtype" />
+        <meta property="og:locale" content="en_US" key="oglocale" />
+        <meta property="og:site_name" content={yoastSeo.opengraphSiteName} key="ogsitename" />
+
+        {/* twitter */}
       </Head>
       <Navbar
         isMainPage={false}
