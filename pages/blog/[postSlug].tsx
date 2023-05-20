@@ -94,7 +94,7 @@ export default function Post({ postData, yoastSeo }: { postData: any, yoastSeo: 
   return (
     <div className={`${styles.single_post} font-sand`}>
       <Head>
-        <link rel="icon" href="/charu.ico" />
+        <link rel="icon" href="/charu.ico"/>
         <title key="title" >{postData.title}</title>
         <meta name="description" content={yoastSeo.metaDesc} key="metadescription" />
         {/* open graph */}
