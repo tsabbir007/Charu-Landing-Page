@@ -88,7 +88,7 @@ export default function Post({ postData, yoastSeo }: { postData: any, yoastSeo: 
     return null
   }
 
-  let ogUrl = yoastSeo.opengraphUrl.replace('https://blog.charu.app', 'http://localhost:3000/blog')
+  let ogUrl = yoastSeo.opengraphUrl.replace('https://blog.charu.app', 'https://charu-landing-page.vercel.app/blog')
 
 
   return (
